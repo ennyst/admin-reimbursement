@@ -1,3 +1,5 @@
+
+
 export const navItems = [
   {
     name: 'Dashboard',
@@ -24,7 +26,7 @@ export const navItems = [
   },
   {
     title: true,
-    name: 'Components'
+    name: 'Menu'
   },
   {
     name: 'Company',
@@ -82,8 +84,39 @@ export const navItems = [
         name: 'Approver',
         url: '/cashadvance/approver',
         icon: 'icon-cursor'
+      },
+      {
+        name: 'Finance',
+        url: '/cashadvance/finance',
+        icon: 'icon-cursor'
+      },
+      {
+        name: 'Verificator',
+        url: '/cashadvance/verificator',
+        icon: 'icon-cursor'
       }
     ]
+  },
+  {
+    name:'Report',
+    url:'/report',
+    icon:'icon-star',
+    children:[
+      {
+        name: 'Reimbursement',
+        url: '/report/reportreimbursement',
+        icon:'icon-star'
+      },
+      {
+        name: 'Cash Advance',
+        url: '/report/reportcashadvance',
+        icon:'icon-star'
+      }
+    ]
+  },
+  {
+    title: true,
+    name: 'Components'
   },
   {
     name: 'Base',

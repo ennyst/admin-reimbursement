@@ -93,6 +93,10 @@ export const routes: Routes = [
       {
         path: 'cashadvance',
         loadChildren: './views/cashadvance/cashadvance.module#CashAdvanceModule'
+      },
+      {
+        path:'report',
+        loadChildren:'./views/report/report.module#ReportModule'
       }
     ]
   }
