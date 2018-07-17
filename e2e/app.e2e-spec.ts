@@ -1,10 +1,10 @@
-import { LbdFreeAngularcliPage } from './app.po';
+import { CoreUIPage } from './app.po';
 
-describe('lbd-free-angularcli App', function() {
-  let page: LbdFreeAngularcliPage;
+describe('core-ui App', function() {
+  let page: CoreUIPage;
 
   beforeEach(() => {
-    page = new LbdFreeAngularcliPage();
+    page = new CoreUIPage();
   });
 
   it('should display message saying app works', () => {

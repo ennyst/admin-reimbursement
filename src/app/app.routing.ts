@@ -1,36 +1,97 @@
 import { NgModule } from '@angular/core';
-import { CommonModule, } from '@angular/common';
-import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { UserComponent } from './user/user.component';
-import { TablesComponent } from './tables/tables.component';
-import { TypographyComponent } from './typography/typography.component';
-import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';
+// Import Containers
+import { DefaultLayoutComponent } from './containers';
 
-const routes: Routes =[
-    { path: 'dashboard',      component: HomeComponent },
-    { path: 'user',           component: UserComponent },
-    { path: 'table',          component: TablesComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
-      { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
+import { P404Component } from './views/error/404.component';
+import { P500Component } from './views/error/500.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
+
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  {
+    path: '404',
+    component: P404Component,
+    data: {
+      title: 'Page 404'
+    }
+  },
+  {
+    path: '500',
+    component: P500Component,
+    data: {
+      title: 'Page 500'
+    }
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      title: 'Login Page'
+    }
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    data: {
+      title: 'Register Page'
+    }
+  },
+  {
+    path: '',
+    component: DefaultLayoutComponent,
+    data: {
+      title: 'Home'
+    },
+    children: [
+      {
+        path: 'base',
+        loadChildren: './views/base/base.module#BaseModule'
+      },
+      {
+        path: 'buttons',
+        loadChildren: './views/buttons/buttons.module#ButtonsModule'
+      },
+      {
+        path: 'charts',
+        loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+      },
+      {
+        path: 'dashboard',
+        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'icons',
+        loadChildren: './views/icons/icons.module#IconsModule'
+      },
+      {
+        path: 'notifications',
+        loadChildren: './views/notifications/notifications.module#NotificationsModule'
+      },
+      {
+        path: 'theme',
+        loadChildren: './views/theme/theme.module#ThemeModule'
+      },
+      {
+        path: 'widgets',
+        loadChildren: './views/widgets/widgets.module#WidgetsModule'
+      },
+      {
+        path: 'company',
+        loadChildren: './views/company/company.module#CompanyModule'
+      }
+    ]
+  }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-  ],
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

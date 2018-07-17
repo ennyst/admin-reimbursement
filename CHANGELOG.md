@@ -1,34 +1,38 @@
-## [1.4.0] - 2017-08-28
-### Changes for Angular 4
-- added angular-cli
-- update to Angular 4
+## [angular](./README.md) version `changelog`
 
-## [v1.3.0] 2017-08-28
-### skipped for sync with Angular 4 version convention
+###### `v2.0.0-rc.2`
+- update: @angular/animations to 6.0.9
+- update: @angular/common to 6.0.9
+- update: @angular/compiler to 6.0.9
+- update: @angular/core to 6.0.9
+- update: @angular/forms to 6.0.9
+- update: @angular/http to 6.0.9
+- update: @angular/platform-browser to 6.0.9
+- update: @angular/platform-browser-dynamic to 6.0.9
+- update: @angular/router to 6.0.9
+- update: @coreui/coreui to 2.0.4
+- update: @coreui/icons to 0.3.0
+- update: bootstrap to 4.1.2
+- update: codelyzer to 4.4.2
+- update: karma-jasmine-html-reporter to 1.2.0
 
-## [v1.2.0] 2017-08-28
-### skipped for sync with Angular 4 version convention
+###### `v2.0.0-rc.1`
+- chore: dependencies update
 
-## [1.1.1] - 2017-03-21
-### Added
-- added "@types/core-js": "0.9.35" in package
+###### `v1.0.10`
+- update: ngx-bootstrap to `2.0.2`
+- update: dependencies
 
-## [1.1.0] - 2017-03-01
-### Added
-- fix version numbers in package.json and CSS and JS
+###### `v1.0.9`
+- update: bootstrap to `v4.0.0`
+- update: dependencies
 
-## [1.0.2] - 2017-02-27
-### Added
-- added upgrade to pro page
-- fixed navbar title
-- changed http://www.creative-tim.com/ with https://www.creative-tim.com/
-
-## [1.0.1] - 2017-02-13
-### small fix
-- changes in routes(redirect '' to 'dashboard' + added HashLocationStrategy)
-- changes in documentation
-- changes in sidebar(cleaned li tags + changed z-index)
-- changes in footer(added current date)
-
-## [1.0.0] - 2016-12-14
-### initial Release
+###### `v1.0.8`
+- update: bootstrap to `4.0.0-beta.3`
+- update: ngx-bootstrap to `2.0.0-rc.0`
+- fix(forms): duplicate `select` ids, toggleCollapse
+- fix(dashboard): btnRadio
+- refactor: `input-group-addon` to new `4.0.0-beta.3` classes
+- feature: some Bootstrap4 components added
+- feat: mobile sidebar link click closes the sidebar
+- update: dependencies
