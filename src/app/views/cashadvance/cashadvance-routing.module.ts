@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClaimerComponent } from "./claimer.component";
+import { ApproverComponent } from './approver.component';
 
 const routes: Routes=[
     {
         path:'',
-        component: ClaimerComponent,
         data:{
             title:'Cash Advance'
         },
@@ -17,6 +17,12 @@ const routes: Routes=[
               data: {
                 title: 'Claimer'
               }
+            },{
+                path: 'approver',
+                component: ApproverComponent,
+                data: {
+                  title: 'Approver'
+                }
             }
         ]
     }

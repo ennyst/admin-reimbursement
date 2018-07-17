@@ -78,6 +78,10 @@ export const navItems = [
         name: 'Claimer',
         url: '/cashadvance/claimer',
         icon: 'icon-cursor'
+      },{
+        name: 'Approver',
+        url: '/cashadvance/approver',
+        icon: 'icon-cursor'
       }
     ]
   },

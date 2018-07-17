@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { ClaimerComponent } from "./claimer.component";
+import { ApproverComponent } from "./approver.component";
 
 import { CashadvanceRoutingModule } from "./cashadvance-routing.module";
 
@@ -10,7 +11,8 @@ import { CashadvanceRoutingModule } from "./cashadvance-routing.module";
         CashadvanceRoutingModule,
     ],
     declarations:[ 
-        ClaimerComponent
+        ClaimerComponent,
+        ApproverComponent
     ]
 })
 export class CashAdvanceModule{}
