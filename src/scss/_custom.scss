@@ -1,1 +1,15 @@
-// Here you can add other styles
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    color: #fff;
+    background: #236967;
+}
+.sidebar .nav-link .nav-icon {
+    display: inline-block;
+    width: 1.09375rem;
+    margin: 0 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: #e8f25e;
+    text-align: center;
+}
