@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { EmployeeComponent } from './employee.component';
-import { CashExpenseComponent } from './cashexpense.component';
+import { ExpenseCategoryComponent } from './expensecategory.component';
 import { TagComponent } from "./tag.component";
 
 
@@ -21,10 +21,10 @@ const routes: Routes = [
         }
       },
       {
-        path: 'cashexpense',
-        component: CashExpenseComponent,
+        path: 'expensecategory',
+        component: ExpenseCategoryComponent,
         data: {
-          title: 'Cash Expense'
+          title: 'Expense Category'
         }
       },
       {

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { EmployeeComponent } from './employee.component';
-import { CashExpenseComponent } from "./cashexpense.component";
+import { ExpenseCategoryComponent } from "./expensecategory.component";
 import { TagComponent } from "./tag.component";
 
 
@@ -19,7 +19,7 @@ import { CompanyRoutingModule } from './company-routing.module';
   ],
   declarations: [
     EmployeeComponent,
-    CashExpenseComponent,
+    ExpenseCategoryComponent,
     TagComponent
   ]
 })

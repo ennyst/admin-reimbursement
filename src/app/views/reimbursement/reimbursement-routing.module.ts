@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ClaimerComponent } from './claimer.component';
 import { ApprovalComponent } from './approval.component';
-import { FinanceComponent } from "./finance.component";
-
+import {FinanceComponent  } from "./finance.component";
 
 
 const routes: Routes = [
@@ -25,7 +24,7 @@ const routes: Routes = [
         path: 'approval',
         component: ApprovalComponent,
         data: {
-          title: ' Approval'
+          title: 'Approval'
         }
       },
       {
