@@ -69,6 +69,17 @@ export const navItems = [
         icon: 'icon-puzzle'
       }
     ]
+  },{
+    name: 'Cash Advance',
+    url: '/cashadvance',
+    icon: 'icon-cursor',
+    children: [
+      {
+        name: 'Claimer',
+        url: '/cashadvance/claimer',
+        icon: 'icon-cursor'
+      }
+    ]
   },
   {
     name: 'Base',

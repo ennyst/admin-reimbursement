@@ -8,8 +8,17 @@ const routes: Routes=[
         path:'',
         component: ClaimerComponent,
         data:{
-            title:'Claimer'
-        }
+            title:'Cash Advance'
+        },
+        children: [
+            {
+              path: 'claimer',
+              component: ClaimerComponent,
+              data: {
+                title: 'Claimer'
+              }
+            }
+        ]
     }
 ];
 
@@ -17,4 +26,4 @@ const routes: Routes=[
     imports : [RouterModule.forChild(routes)],
     exports:[RouterModule]
 })
-export class ClaimerRoutingModule{}
+export class CashadvanceRoutingModule{}
