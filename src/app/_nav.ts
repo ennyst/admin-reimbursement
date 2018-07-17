@@ -35,6 +35,38 @@ export const navItems = [
         name: 'Employee',
         url: '/company/employee',
         icon: 'icon-puzzle'
+      },
+      {
+        name: 'Cash Expense',
+        url: '/company/cashexpense',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Tag',
+        url: '/company/tag',
+        icon: 'icon-puzzle'
+      }
+    ]
+  },
+  {
+    name: 'Reimbursement',
+    url: '/reimbursement',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'Claimer',
+        url: '/reimbursement/claimer',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Approval ',
+        url: '/reimbursement/approval',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Finance',
+        url: '/reimbursement/finance',
+        icon: 'icon-puzzle'
       }
     ]
   },
