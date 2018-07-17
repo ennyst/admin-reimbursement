@@ -49,23 +49,23 @@ export const navItems = [
     ]
   },
   {
-    name: 'Company',
-    url: '/company',
+    name: 'Reimbursement',
+    url: '/reimbursement',
     icon: 'icon-puzzle',
     children: [
       {
-        name: 'Employee',
-        url: '/company/employee',
+        name: 'Claimer',
+        url: '/reimbursement/claimer',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Expense Category',
-        url: '/company/expensecategory',
+        name: 'Approval',
+        url: '/reimbursement/approval',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Tag',
-        url: '/company/tag',
+        name: 'Finance',
+        url: '/reimbursement/finance',
         icon: 'icon-puzzle'
       }
     ]
