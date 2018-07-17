@@ -4,5 +4,5 @@ import { Component } from '@angular/core';
     templateUrl:'claimer.component.html'
 })
 export class ClaimerComponent{
-
+    constructor() { }
 }
