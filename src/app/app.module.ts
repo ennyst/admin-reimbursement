@@ -5,6 +5,10 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
+import { MatTableModule } from "@angular/material";
+import { HttpClientModule } from "@angular/common/http";
+import { UserService } from "./services/user.service";
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -24,6 +28,7 @@ const APP_CONTAINERS = [
 ];
 
 import {
+
   AppAsideModule,
   AppBreadcrumbModule,
   AppHeaderModule,
@@ -39,9 +44,12 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 
+import { UsertableComponent } from './component/usertable/usertable.component';
+
 @NgModule({
   imports: [
-   
+    MatTableModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     AppAsideModule,
@@ -55,17 +63,21 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     ChartsModule
   ],
   declarations: [
+    
     AppComponent,
     ...APP_CONTAINERS,
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UsertableComponent
   ],
-  providers: [{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+  providers:[UserService],
+  //  [ UserService,{
+  //   provide: LocationStrategy,
+  //   useClass: HashLocationStrategy
+  // }],
+  
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
