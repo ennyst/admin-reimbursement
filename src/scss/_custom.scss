@@ -13,3 +13,12 @@
     color: #e8f25e;
     text-align: center;
 }
+
+.sidebar .nav-dropdown.open > .nav-dropdown-items {
+    background-color: black;
+    max-height: 1500px;
+}
+.sidebar .nav-link.active {
+    color: #edd7d7;
+    background: #28628e00;
+}
