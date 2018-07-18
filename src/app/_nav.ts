@@ -34,6 +34,11 @@ export const navItems = [
     icon: 'icon-puzzle',
     children: [
       {
+        name: 'Team',
+        url: '/company/team',
+        icon: 'icon-puzzle'
+      },
+      {
         name: 'Employee',
         url: '/company/employee',
         icon: 'icon-puzzle'
