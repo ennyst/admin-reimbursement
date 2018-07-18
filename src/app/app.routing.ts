@@ -91,6 +91,10 @@ export const routes: Routes = [
         loadChildren: './views/reimbursement/reimbursement.module#ReimbursementModule'
       },
       {
+        path: 'component',
+        loadChildren:'./component/component.module#ComponentModule'
+      },
+      {
         path: 'cashadvance',
         loadChildren: './views/cashadvance/cashadvance.module#CashAdvanceModule'
       },

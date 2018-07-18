@@ -76,7 +76,20 @@ export const navItems = [
         icon: 'icon-puzzle'
       }
     ]
-  },{
+  },
+  {
+    name: 'Component',
+    url:'/component',
+    icon: 'icon-cursor',
+    children:[
+      {
+        name: 'Usertable',
+        url: '/component/usertable',
+        icon: 'icon-cursor'
+      }
+    ]
+  },
+  {
     name: 'Cash Advance',
     url: '/cashadvance',
     icon: 'icon-cursor',
