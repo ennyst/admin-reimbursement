@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { EmployeeComponent } from './employee.component';
 import { ExpenseCategoryComponent } from "./expensecategory.component";
 import { TagComponent } from "./tag.component";
+import {TeamComponent } from "./team.component";
 
 
 
@@ -18,6 +19,7 @@ import { CompanyRoutingModule } from './company-routing.module';
    
   ],
   declarations: [
+    TeamComponent,
     EmployeeComponent,
     ExpenseCategoryComponent,
     TagComponent

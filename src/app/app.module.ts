@@ -9,7 +9,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
-
+import {DataTableModule} from "angular2-datatable";
 import { AppComponent } from './app.component';
 
 // Import containers
@@ -42,6 +42,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
   imports: [
+    DataTableModule,
     BrowserModule,
     AppRoutingModule,
     AppAsideModule,

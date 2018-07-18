@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmployeeComponent } from './employee.component';
 import { ExpenseCategoryComponent } from './expensecategory.component';
 import { TagComponent } from "./tag.component";
+import { TeamComponent } from './team.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,13 @@ const routes: Routes = [
       title: 'Company'
     },
     children: [
+      {
+        path: 'team',
+        component: TeamComponent,
+        data:{
+          title: 'Team'
+        }
+      },
       {
         path: 'employee',
         component: EmployeeComponent,
