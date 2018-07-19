@@ -79,12 +79,12 @@ export const navItems = [
   },
   {
     name: 'Component',
-    url:'/component',
+    url: '/componen',
     icon: 'icon-cursor',
-    children:[
+    children: [
       {
-        name: 'Usertable',
-        url: '/component/usertable',
+        name: 'User Table',
+        url: '/componen/usertable',
         icon: 'icon-cursor'
       }
     ]

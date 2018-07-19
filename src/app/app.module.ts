@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy, CommonModule } from '@angular/common';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { HttpModule } from '@angular/http';
 
-import { MatTableModule } from "@angular/material";
-import { HttpClientModule } from "@angular/common/http";
-import { UserService } from "./services/user.service";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -43,13 +42,14 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { DataTableModule } from 'angular2-datatable/lib/DataTableModule';
 
-import { UsertableComponent } from './component/usertable/usertable.component';
 
 @NgModule({
   imports: [
-    MatTableModule,
-    HttpClientModule,
+    DataTableModule,
+    CommonModule,
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     AppAsideModule,
@@ -60,7 +60,9 @@ import { UsertableComponent } from './component/usertable/usertable.component';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    BrowserAnimationsModule,
+    HttpModule,
   ],
   declarations: [
     
@@ -69,14 +71,9 @@ import { UsertableComponent } from './component/usertable/usertable.component';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent,
-    UsertableComponent
+    RegisterComponent
   ],
-  providers:[UserService],
-  //  [ UserService,{
-  //   provide: LocationStrategy,
-  //   useClass: HashLocationStrategy
-  // }],
+ 
   
   bootstrap: [ AppComponent ]
 })
