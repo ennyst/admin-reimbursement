@@ -10,9 +10,9 @@ export class UrlService {
 //       return this.serverUrl + "/secure/user/";
 //    }
 
-   urlExample: string="https://jsonplaceholder.typicode.com/users";
-   getUrlExample():string{
-       return this.urlExample;
+   urlAdvApprover: string="https://jsonplaceholder.typicode.com/users";
+   getUrlAdvApprover():string{
+       return this.urlAdvApprover;
    }
 
    
