@@ -20,7 +20,6 @@ export class UrlService {
    getUrlTeam():string{
        return this.urlTeam;
    }
-
    urlEmployee: string="https://jsonplaceholder.typicode.com/users";
    getUrlEmployee():string{
        return this.urlEmployee;
@@ -29,9 +28,9 @@ export class UrlService {
    getUrlAdvClaimer():string{
        return this.urlAdvClaimer;
    }
+   urlExpenseCategory: string="https://jsonplaceholder.typicode.com/users";
+   getExpenseCategory():string{
+       return this.urlExpenseCategory;
+   }
    
-
-
-
-
 }

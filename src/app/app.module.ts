@@ -48,6 +48,7 @@ import { UrlService } from "./services/url.service";
 import { TeamService } from "./services/team.service";
 import { EmployeeService } from "./services/employee.service";
 import { AdvClaimerService } from './services/advclaimer.service';
+import { ExpenseCategoryService } from "./services/expensecategory.service";
 
 
 @NgModule({
@@ -80,16 +81,13 @@ import { AdvClaimerService } from './services/advclaimer.service';
     LoginComponent,
     RegisterComponent
   ],
- 
-
 
   providers:[ExampleService,
     UrlService,
     TeamService,
     EmployeeService,
-    AdvClaimerService],
-
-
+    AdvClaimerService,
+    ExpenseCategoryService],
 
   bootstrap: [ AppComponent ]
 })
