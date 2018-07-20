@@ -83,7 +83,7 @@ import { AdvClaimerService } from './services/advclaimer.service';
   ],
  
 
-  providers:[ExampleService,UrlService,TeamService],
+  providers:[ExampleService,UrlService,TeamService,AdvClaimerService],
 
 
   bootstrap: [ AppComponent ]

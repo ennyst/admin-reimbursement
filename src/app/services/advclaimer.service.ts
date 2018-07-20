@@ -20,10 +20,6 @@ export class AdvClaimerService {
               .map((res: Response) => res.json())
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }
-
-
-
-     
      private extractData(res:Response) {
         let body = res.json();
         return body || [];
