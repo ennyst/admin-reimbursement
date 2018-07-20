@@ -45,7 +45,12 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataTableModule } from 'angular2-datatable/lib/DataTableModule';
 import { ExampleService } from "./services/example.service";
 import { UrlService } from "./services/url.service";
+<<<<<<< HEAD
 import { TeamService } from "./services/team.service";
+||||||| merged common ancestors
+=======
+import { AdvClaimerService } from './services/advclaimer.service';
+>>>>>>> 2120ffc3caf34331fdf0e7fab8bb92d80033b618
 
 @NgModule({
   imports: [
@@ -78,7 +83,19 @@ import { TeamService } from "./services/team.service";
     RegisterComponent
   ],
  
+<<<<<<< HEAD
   providers:[ExampleService,UrlService,TeamService],
+||||||| merged common ancestors
+  providers:[ExampleService,UrlService],
+=======
+  providers:[
+    AdvClaimerService,
+    ExampleService,
+    UrlService,
+    
+  ],
+
+>>>>>>> 2120ffc3caf34331fdf0e7fab8bb92d80033b618
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
