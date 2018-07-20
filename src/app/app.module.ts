@@ -82,7 +82,13 @@ import { AdvClaimerService } from './services/advclaimer.service';
   ],
  
 
-  providers:[ExampleService,UrlService,TeamService, EmployeeService,AdvClaimerService],
+
+  providers:[ExampleService,
+    UrlService,
+    TeamService,
+    EmployeeService,
+    AdvClaimerService],
+
 
 
   bootstrap: [ AppComponent ]
