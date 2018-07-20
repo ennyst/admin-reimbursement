@@ -32,5 +32,13 @@ export class UrlService {
    getExpenseCategory():string{
        return this.urlExpenseCategory;
    }
-   
+   urlAdvFinance: string="https://jsonplaceholder.typicode.com/users";
+   getAdvFinance():string{
+       return this.urlAdvFinance;
+   }
+
+   urlAdvVerificator: string="https://jsonplaceholder.typicode.com/users";
+   getAdvVerificator():string{
+       return this.urlAdvVerificator;
+   }
 }
