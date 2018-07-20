@@ -1,26 +1,24 @@
-import { Component,OnInit } from '@angular/core';
-import { TeamService } from "../../services/team.service";
+import { Component, OnInit } from '@angular/core';
+import { ReimbursementApproverService } from "../../services/reimbursementapprover.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
-
 @Component({
-  templateUrl: 'team.component.html'
+  templateUrl: 'approver.component.html'
 })
-export class TeamComponent implements OnInit{
-  data: LocalDataSource;
-    constructor(private teamService: TeamService) { 
-      this.data = new LocalDataSource()
-    }
+export class ApproverComponent implements OnInit{
 
-  ngOnInit(){
-    this.teamService.getTeamUserList().subscribe(response=>{
+  data:LocalDataSource;
+  constructor(private reimbursementApproverService: ReimbursementApproverService) {
+    this.data = new LocalDataSource()
+   }
+   ngOnInit(){
+    this.reimbursementApproverService.getReimbursementApproverUserList().subscribe(response=>{
       this.data.load(response);
     },error=>{alert("error")}
     )
-  }
+   }
 
-  
-  editData(e?){
+   editData(e?){
     console.log(e);
     console.log(this.data)
   }
@@ -41,7 +39,7 @@ export class TeamComponent implements OnInit{
           
         },
         username: {
-          title: 'Username'
+          title: 'User Name'
         },
         email: {
           title: 'Email'
@@ -51,5 +49,6 @@ export class TeamComponent implements OnInit{
       confirmSave: true,
       confirmDelete:true
     };
+
 
 }

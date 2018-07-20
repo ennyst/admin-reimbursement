@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { ClaimerComponent } from './claimer.component';
-import { ApprovalComponent } from "./approval.component";
+import { ApproverComponent } from "./approver.component";
 import { FinanceComponent } from "./finance.component";
-
-
+import { Ng2SmartTableModule } from "ng2-smart-table";
 
 // Components Routing
 import { ReimbursementRoutingModule } from './reimbursement-routing.module';
@@ -15,11 +14,12 @@ import { ReimbursementRoutingModule } from './reimbursement-routing.module';
 @NgModule({
   imports: [
     ReimbursementRoutingModule,
+    Ng2SmartTableModule,
    
   ],
   declarations: [
     ClaimerComponent,
-    ApprovalComponent,
+    ApproverComponent,
     FinanceComponent
   ]
 })

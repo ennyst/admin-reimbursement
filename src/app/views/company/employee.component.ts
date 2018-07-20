@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from "../../services/employee.service";
-import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
+import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
   templateUrl: 'employee.component.html'

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TagService } from "../../services/tag.service";
-import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
+import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
   templateUrl: 'tag.component.html'

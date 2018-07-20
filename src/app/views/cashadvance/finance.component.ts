@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { AdvFinanceService } from "../../services/advfinance.service";
-import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
+import { LocalDataSource } from 'ng2-smart-table';
 
 
 @Component({

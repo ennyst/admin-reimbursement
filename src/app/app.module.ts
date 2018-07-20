@@ -52,7 +52,9 @@ import { ExpenseCategoryService } from "./services/expensecategory.service";
 import { TagService } from "./services/tag.service";
 import { AdvFinanceService } from './services/advfinance.service';
 import { AdvVerificatorService } from './services/advverificator.service';
-
+import { ReimbursementClaimerService } from "./services/reimbursementclaimer.service";
+import { ReimbursementApproverService } from './services/reimbursementapprover.service';
+import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
 
 
 @NgModule({
@@ -95,6 +97,9 @@ import { AdvVerificatorService } from './services/advverificator.service';
     TagService,
     AdvFinanceService,
     AdvVerificatorService,
+    ReimbursementClaimerService,
+    ReimbursementApproverService,
+    ReimbursementFinanceService,
     ExpenseCategoryService],
 
 

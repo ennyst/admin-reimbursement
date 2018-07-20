@@ -1,7 +1,7 @@
 
 import { Component,OnInit } from '@angular/core';
 import { AdvClaimerService } from "../../services/advclaimer.service";
-import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
+import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
     templateUrl:'claimer.component.html'

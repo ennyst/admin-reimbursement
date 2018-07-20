@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClaimerComponent } from './claimer.component';
-import { ApprovalComponent } from './approval.component';
-import {FinanceComponent  } from "./finance.component";
+import { ApproverComponent } from './approver.component';
+import { FinanceComponent } from "./finance.component";
 
 
 const routes: Routes = [
@@ -21,10 +21,10 @@ const routes: Routes = [
         }
       },
       {
-        path: 'approval',
-        component: ApprovalComponent,
+        path: 'approver',
+        component: ApproverComponent,
         data: {
-          title: 'Approval'
+          title: 'Approver'
         }
       },
       {

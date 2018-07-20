@@ -1,7 +1,7 @@
 
 import { Component,OnInit } from '@angular/core';
 import { AdvVerificatorService } from "../../services/advverificator.service";
-import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
+import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
     templateUrl:'verificator.component.html'
