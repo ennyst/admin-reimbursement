@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Rx';
 
 
 @Injectable()
-export class ExampleService {
+export class AdvAprService {
     token = localStorage.getItem('token')
     headers = new Headers();
     opts: RequestOptionsArgs;
@@ -19,8 +19,8 @@ export class ExampleService {
     //    this.opts = { headers : this.headers };
     }
 
-    getExampleUserList(): Observable<any[]> {
-        return this.http.get(this.urlService.getUrlExample())
+    getAdvApproveUserList(): Observable<any[]> {
+        return this.http.get(this.urlService.getUrlAdvApprover())
               .map((res: Response) => res.json())
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }

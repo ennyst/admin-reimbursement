@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { ExampleService } from "../../services/example.service";
+import { AdvAprService } from "../../services/advapproper.service";
 import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
 
 
@@ -9,11 +9,11 @@ import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
 export class ApproverComponent implements OnInit{
     // data:any=[];
     data: LocalDataSource;
-    constructor(private exService: ExampleService) { 
+    constructor(private advApproverService: AdvAprService) { 
       this.data = new LocalDataSource()
     }
     ngOnInit(){
-      this.exService.getExampleUserList().subscribe(response=>{
+      this.advApproverService.getAdvApproveUserList().subscribe(response=>{
         this.data.load(response);
       },error=>{alert("error")}
       )
