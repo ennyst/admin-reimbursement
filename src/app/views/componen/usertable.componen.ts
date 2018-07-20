@@ -17,6 +17,7 @@ export class UserTableComponen implements OnInit{
     constructor(private userService: UserService) { }
 
     ngOnInit() {
+      
     }
 }
 

@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy, CommonModule } from '@angular/common';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -6,7 +6,7 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { HttpModule } from '@angular/http';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -43,14 +43,17 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataTableModule } from 'angular2-datatable/lib/DataTableModule';
-
+import { ExampleService } from "./services/example.service";
+import { UrlService } from "./services/url.service";
 
 @NgModule({
   imports: [
+    
     DataTableModule,
     CommonModule,
     BrowserAnimationsModule,
-    BrowserModule,
+    // BrowserModule,
+    NoopAnimationsModule,
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
@@ -74,7 +77,7 @@ import { DataTableModule } from 'angular2-datatable/lib/DataTableModule';
     RegisterComponent
   ],
  
-  
+  providers:[ExampleService,UrlService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

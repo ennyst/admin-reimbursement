@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserService } from '../../services/user.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports:[
@@ -16,7 +17,8 @@ import { UserService } from '../../services/user.service';
         BrowserModule,
         HttpClientModule,
         MatTableModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        CommonModule
         
     ],
     declarations:[ 
