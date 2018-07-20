@@ -56,6 +56,9 @@ import { AdvFinanceService } from './services/advfinance.service';
 import { AdvVerificatorService } from './services/advverificator.service';
 
 
+
+
+
 @NgModule({
   imports: [
     
@@ -94,10 +97,9 @@ import { AdvVerificatorService } from './services/advverificator.service';
     EmployeeService,
     AdvClaimerService,
     TagService,
-    ExpenseCategoryService,
-    ExpenseCategoryService,
     AdvFinanceService,
-    AdvVerificatorService
+    AdvVerificatorService,
+    ExpenseCategoryService
   ],
   bootstrap: [ AppComponent ]
 })
