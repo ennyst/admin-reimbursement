@@ -19,8 +19,8 @@ export class EmployeeService {
     //    this.opts = { headers : this.headers };
     }
 
-    getTeamUserList(): Observable<any[]> {
-        return this.http.get(this.urlService.getUrlTeam())
+    getEmployeeUserList(): Observable<any[]> {
+        return this.http.get(this.urlService.getUrlEmployee())
               .map((res: Response) => res.json())
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }

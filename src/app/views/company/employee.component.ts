@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExampleService } from "../../services/example.service";
+import { EmployeeService } from "../../services/employee.service";
 import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
 
 @Component({
@@ -8,11 +8,11 @@ import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
 export class EmployeeComponent implements OnInit{
 
   data:LocalDataSource;
-  constructor(private exService: ExampleService) {
+  constructor(private employeeService: EmployeeService) {
     this.data = new LocalDataSource()
    }
    ngOnInit(){
-    this.exService.getExampleUserList().subscribe(response=>{
+    this.employeeService.getEmployeeUserList().subscribe(response=>{
       this.data.load(response);
     },error=>{alert("error")}
     )

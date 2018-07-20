@@ -45,9 +45,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataTableModule } from 'angular2-datatable/lib/DataTableModule';
 import { ExampleService } from "./services/example.service";
 import { UrlService } from "./services/url.service";
-
 import { TeamService } from "./services/team.service";
-
+import { EmployeeService } from "./services/employee.service";
 import { AdvClaimerService } from './services/advclaimer.service';
 
 
@@ -83,7 +82,7 @@ import { AdvClaimerService } from './services/advclaimer.service';
   ],
  
 
-  providers:[ExampleService,UrlService,TeamService],
+  providers:[ExampleService,UrlService,TeamService, EmployeeService,AdvClaimerService],
 
 
   bootstrap: [ AppComponent ]
