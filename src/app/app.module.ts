@@ -49,7 +49,13 @@ import { TeamService } from "./services/team.service";
 import { EmployeeService } from "./services/employee.service";
 import { AdvClaimerService } from './services/advclaimer.service';
 import { ExpenseCategoryService } from "./services/expensecategory.service";
+<<<<<<< HEAD
 import { TagService } from "./services/tag.service";
+||||||| merged common ancestors
+=======
+import { AdvFinanceService } from './services/advfinance.service';
+import { AdvVerificatorService } from './services/advverificator.service';
+>>>>>>> 42488724c5cec5194d4b6697100b4681d559a788
 
 
 @NgModule({
@@ -89,8 +95,17 @@ import { TagService } from "./services/tag.service";
     TeamService,
     EmployeeService,
     AdvClaimerService,
+<<<<<<< HEAD
     TagService,
     ExpenseCategoryService],
+||||||| merged common ancestors
+    ExpenseCategoryService],
+=======
+    ExpenseCategoryService,
+    AdvFinanceService,
+    AdvVerificatorService
+  ],
+>>>>>>> 42488724c5cec5194d4b6697100b4681d559a788
 
   bootstrap: [ AppComponent ]
 })

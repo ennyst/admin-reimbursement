@@ -32,9 +32,23 @@ export class UrlService {
    getUrlExpenseCategory():string{
        return this.urlExpenseCategory;
    }
+<<<<<<< HEAD
    urlTag: string="https://jsonplaceholder.typicode.com/users";
    getUrlTag():string{
        return this.urlTag;
    }
    
+||||||| merged common ancestors
+   
+=======
+   urlAdvFinance: string="https://jsonplaceholder.typicode.com/users";
+   getAdvFinance():string{
+       return this.urlAdvFinance;
+   }
+
+   urlAdvVerificator: string="https://jsonplaceholder.typicode.com/users";
+   getAdvVerificator():string{
+       return this.urlAdvVerificator;
+   }
+>>>>>>> 42488724c5cec5194d4b6697100b4681d559a788
 }
