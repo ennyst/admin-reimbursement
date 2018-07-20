@@ -49,6 +49,7 @@ import { TeamService } from "./services/team.service";
 import { EmployeeService } from "./services/employee.service";
 import { AdvClaimerService } from './services/advclaimer.service';
 import { ExpenseCategoryService } from "./services/expensecategory.service";
+import { TagService } from "./services/tag.service";
 
 
 @NgModule({
@@ -88,6 +89,7 @@ import { ExpenseCategoryService } from "./services/expensecategory.service";
     TeamService,
     EmployeeService,
     AdvClaimerService,
+    TagService,
     ExpenseCategoryService],
 
   bootstrap: [ AppComponent ]

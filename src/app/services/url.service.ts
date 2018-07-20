@@ -29,8 +29,12 @@ export class UrlService {
        return this.urlAdvClaimer;
    }
    urlExpenseCategory: string="https://jsonplaceholder.typicode.com/users";
-   getExpenseCategory():string{
+   getUrlExpenseCategory():string{
        return this.urlExpenseCategory;
+   }
+   urlTag: string="https://jsonplaceholder.typicode.com/users";
+   getUrlTag():string{
+       return this.urlTag;
    }
    
 }

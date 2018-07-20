@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Rx';
 
 
 @Injectable()
-export class ExpenseCategoryService {
+export class TagService {
     token = localStorage.getItem('token')
     headers = new Headers();
     opts: RequestOptionsArgs;
@@ -19,8 +19,8 @@ export class ExpenseCategoryService {
     //    this.opts = { headers : this.headers };
     }
 
-    getExpenseCategoryUserList(): Observable<any[]> {
-        return this.http.get(this.urlService.getUrlExpenseCategory())
+    getTagUserList(): Observable<any[]> {
+        return this.http.get(this.urlService.getUrlTag())
               .map((res: Response) => res.json())
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }
