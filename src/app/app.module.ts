@@ -45,6 +45,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DataTableModule } from 'angular2-datatable/lib/DataTableModule';
 import { ExampleService } from "./services/example.service";
 import { UrlService } from "./services/url.service";
+import { AdvClaimerService } from './services/advclaimer.service';
 
 @NgModule({
   imports: [
@@ -77,7 +78,13 @@ import { UrlService } from "./services/url.service";
     RegisterComponent
   ],
  
-  providers:[ExampleService,UrlService],
+  providers:[
+    AdvClaimerService,
+    ExampleService,
+    UrlService,
+    
+  ],
+
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

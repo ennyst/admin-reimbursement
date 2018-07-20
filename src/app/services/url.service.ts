@@ -5,160 +5,165 @@ import { Observable } from 'rxjs/Rx';
 export class UrlService {
    constructor() {
    }
-   serverUrl: string ="http://mtpc583:8080/api";
-   getUrlUsers(): string {
-      return this.serverUrl + "/secure/user/";
-   }
+//    serverUrl: string ="http://mtpc583:8080/api";
+//    getUrlUsers(): string {
+//       return this.serverUrl + "/secure/user/";
+//    }
 
    urlExample: string="https://jsonplaceholder.typicode.com/users";
    getUrlExample():string{
        return this.urlExample;
    }
 
-   getUrlUserById(id: number): string {
-       return this.serverUrl + "/secure/user/"+id;
+   urlAdvClaimer: string="https://jsonplaceholder.typicode.com/users";
+   getUrlAdvClaimer():string{
+       return this.urlAdvClaimer;
    }
 
-   postUrlAddUser(): string {
-       return this.serverUrl + "/secure/user/add/";
-   }
+//    getUrlUserById(id: number): string {
+//        return this.serverUrl + "/secure/user/"+id;
+//    }
 
-   getUrlGrade(): string {
-       return this.serverUrl + "/secure/user/grade/";
-   }
+//    postUrlAddUser(): string {
+//        return this.serverUrl + "/secure/user/add/";
+//    }
 
-   getUrlLocation(): string {
-       return this.serverUrl + "/secure/user/location/";
-   }
+//    getUrlGrade(): string {
+//        return this.serverUrl + "/secure/user/grade/";
+//    }
 
-   postUrlEditActiveUser(idUser: number): string {
-       return this.serverUrl + "/secure/user/"+idUser+"/edit/active/";
-   }
+//    getUrlLocation(): string {
+//        return this.serverUrl + "/secure/user/location/";
+//    }
 
-   postUrlEditRolesUser(idUser: number): string {
-       return this.serverUrl + "/secure/user/"+idUser+"/edit/roles/";
-   }
+//    postUrlEditActiveUser(idUser: number): string {
+//        return this.serverUrl + "/secure/user/"+idUser+"/edit/active/";
+//    }
 
-   getUrlAuth(): string {
-       return this.serverUrl + "/auth/";
-   }
+//    postUrlEditRolesUser(idUser: number): string {
+//        return this.serverUrl + "/secure/user/"+idUser+"/edit/roles/";
+//    }
 
-   getUrlPeriod(): string {
-       return this.serverUrl + "/secure/period/";
-   }
+//    getUrlAuth(): string {
+//        return this.serverUrl + "/auth/";
+//    }
 
-   postPeriodData(): string {
-        return this.serverUrl + "/secure/period/add/"
-   }
+//    getUrlPeriod(): string {
+//        return this.serverUrl + "/secure/period/";
+//    }
 
-   postEditPeriod(id: number): string {
-       return this.serverUrl + "/secure/period/"+id+"/edit/";
-   }
+//    postPeriodData(): string {
+//         return this.serverUrl + "/secure/period/add/"
+//    }
 
-   deleteUrlPeriod(id:number): string {
-       return this.serverUrl + "/secure/period/"+id+"/delete/";
-   }
+//    postEditPeriod(id: number): string {
+//        return this.serverUrl + "/secure/period/"+id+"/edit/";
+//    }
 
-   getUrlElligibleParticipants(id:number): string {
-        return this.serverUrl + "/secure/period/"+id+"/eligible/";
+//    deleteUrlPeriod(id:number): string {
+//        return this.serverUrl + "/secure/period/"+id+"/delete/";
+//    }
 
-   }
+//    getUrlElligibleParticipants(id:number): string {
+//         return this.serverUrl + "/secure/period/"+id+"/eligible/";
 
-   getUrlListUserForElligibleParticipants(id:number): string {
-       return this.serverUrl + "/secure/user/eligible/"+id;
-   }
+//    }
 
-   postElligibleParticipant(id:number): string {
-       return this.serverUrl + "/secure/period/"+id+"/eligible/add/";
-   }
+//    getUrlListUserForElligibleParticipants(id:number): string {
+//        return this.serverUrl + "/secure/user/eligible/"+id;
+//    }
 
-   deleteUrlElligibleParticipant(id:number, participantsId): string {
-        return this.serverUrl + "/secure/period/"+id+"/eligible/delete/"+participantsId;
-    }
+//    postElligibleParticipant(id:number): string {
+//        return this.serverUrl + "/secure/period/"+id+"/eligible/add/";
+//    }
 
-   getUrlCourseList(id:number): string {
-       return this.serverUrl + "/secure/period/"+id+"/course";
-    }
+//    deleteUrlElligibleParticipant(id:number, participantsId): string {
+//         return this.serverUrl + "/secure/period/"+id+"/eligible/delete/"+participantsId;
+//     }
 
-    deleteUrlCourseList(id:number, courseId:number): string {
-        return this.serverUrl + "/secure/period/"+id+"/course/delete/"+courseId;
-    }
+//    getUrlCourseList(id:number): string {
+//        return this.serverUrl + "/secure/period/"+id+"/course";
+//     }
 
-   postUrlAddCourse(id:number): string {
-       return this.serverUrl + "/secure/period/"+id+"/course/add";
-   }
+//     deleteUrlCourseList(id:number, courseId:number): string {
+//         return this.serverUrl + "/secure/period/"+id+"/course/delete/"+courseId;
+//     }
 
-   getUrlListTrainer(): string {
-    return this.serverUrl + "/secure/user/trainer";
-   }
+//    postUrlAddCourse(id:number): string {
+//        return this.serverUrl + "/secure/period/"+id+"/course/add";
+//    }
 
-   getUrlListForAddCourse(): string {
-       return this.serverUrl + "/secure/period/course";
-   }
+//    getUrlListTrainer(): string {
+//     return this.serverUrl + "/secure/user/trainer";
+//    }
 
-   getUrlClassRoom(): string {
-        return this.serverUrl + "/secure/period/classroom";
-    }
+//    getUrlListForAddCourse(): string {
+//        return this.serverUrl + "/secure/period/course";
+//    }
 
-   getUrlDetailCourse(idTraining: number, idCourse: number): string {
-       return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse;
-   } 
+//    getUrlClassRoom(): string {
+//         return this.serverUrl + "/secure/period/classroom";
+//     }
 
-   postEditCourse(idTraining:number, idCourse:number): string {
-    return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse+"/edit"; 
-    }
+//    getUrlDetailCourse(idTraining: number, idCourse: number): string {
+//        return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse;
+//    } 
 
-   getUrlListUserForEnrollParticipants(idTraining:number, idCourse:number): string {
-        return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse+"/eligible/"; 
-    }
+//    postEditCourse(idTraining:number, idCourse:number): string {
+//     return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse+"/edit"; 
+//     }
 
-    postEnrollParticipant(idTraining:number, idCourse:number): string {
-        return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse+"/eligible/add"; 
-    }
+//    getUrlListUserForEnrollParticipants(idTraining:number, idCourse:number): string {
+//         return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse+"/eligible/"; 
+//     }
 
-    getUrlEnrollment(): string {
-        return this.serverUrl + "/secure/enrollment";
-    }
+//     postEnrollParticipant(idTraining:number, idCourse:number): string {
+//         return this.serverUrl + "/secure/period/"+idTraining+"/course/"+idCourse+"/eligible/add"; 
+//     }
 
-    getUrlAchievementList(idRole:number): string {
-        return this.serverUrl + "/secure/achievement/"+idRole;
-    }
+//     getUrlEnrollment(): string {
+//         return this.serverUrl + "/secure/enrollment";
+//     }
 
-    postUrlEditAchievement(idUser:number): string {
-        return this.serverUrl + "/secure/achievement/"+idUser+"/edit";
-    }
+//     getUrlAchievementList(idRole:number): string {
+//         return this.serverUrl + "/secure/achievement/"+idRole;
+//     }
 
-    getUrlMaintenancetList(activeRole: number): string {
-        return this.serverUrl + "/secure/maintenance/"+activeRole; 
-    }
+//     postUrlEditAchievement(idUser:number): string {
+//         return this.serverUrl + "/secure/achievement/"+idUser+"/edit";
+//     }
 
-    getUrlAttendanceList(id:number): string {
-        return this.serverUrl + "/secure/maintenance/"+id+"/attendance/";
-    }
+//     getUrlMaintenancetList(activeRole: number): string {
+//         return this.serverUrl + "/secure/maintenance/"+activeRole; 
+//     }
 
-    getUrlListPersonForAttendance(coursePeriodId:number, scheduleId: number): string {
-        return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/attendance/"+scheduleId;
-    }
+//     getUrlAttendanceList(id:number): string {
+//         return this.serverUrl + "/secure/maintenance/"+id+"/attendance/";
+//     }
 
-    postUrlEditAttendance(coursePeriodId:number, scheduleId: number): string {
-        return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/attendance/"+scheduleId+"/edit";
-    }
+//     getUrlListPersonForAttendance(coursePeriodId:number, scheduleId: number): string {
+//         return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/attendance/"+scheduleId;
+//     }
 
-    getUrlListPersonForAssessment(coursePeriodId:number): string {
-        return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/assessment/";
-    }
+//     postUrlEditAttendance(coursePeriodId:number, scheduleId: number): string {
+//         return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/attendance/"+scheduleId+"/edit";
+//     }
 
-    postUrlEditAssessment(coursePeriodId:number): string {
-        return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/assessment/edit";
-    }
+//     getUrlListPersonForAssessment(coursePeriodId:number): string {
+//         return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/assessment/";
+//     }
+
+//     postUrlEditAssessment(coursePeriodId:number): string {
+//         return this.serverUrl + "/secure/maintenance/"+coursePeriodId+"/assessment/edit";
+//     }
     
-   getUrlActiveTraining(): string {
-        return this.serverUrl + "/secure/dashboard/active";
-   }
+//    getUrlActiveTraining(): string {
+//         return this.serverUrl + "/secure/dashboard/active";
+//    }
 
-   getUrlBCCShedule(): string {
-        return this.serverUrl + "/secure/dashboard/bcc";
-   }
+//    getUrlBCCShedule(): string {
+//         return this.serverUrl + "/secure/dashboard/bcc";
+//    }
    
 
 
