@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
 export class ReportReimbursementComponent{
     constructor() { }
 
-    isCollapsed: boolean = false;
-    isCollapsed2: boolean = false;
+    isCollapsed: boolean = true;
+    isCollapsed2: boolean = true;
    iconCollapse: string = "icon-arrow-up";
+   iconCollapse2: string = "icon-arrow-up";
 
   collapsed(event: any): void {
     // console.log(event);
@@ -30,7 +31,7 @@ export class ReportReimbursementComponent{
   }
 
   toggleCollapse2(): void {
-    this.isCollapsed = !this.isCollapsed;
-    this.iconCollapse = this.isCollapsed ? "icon-arrow-down" : "icon-arrow-up";
+    this.isCollapsed2 = !this.isCollapsed2;
+    this.iconCollapse2 = this.isCollapsed2 ? "icon-arrow-down" : "icon-arrow-up";
   }
 }
