@@ -49,23 +49,17 @@ import { TeamService } from "./services/team.service";
 import { EmployeeService } from "./services/employee.service";
 import { AdvClaimerService } from './services/advclaimer.service';
 import { ExpenseCategoryService } from "./services/expensecategory.service";
-
 import { TagService } from "./services/tag.service";
-
 import { AdvFinanceService } from './services/advfinance.service';
 import { AdvVerificatorService } from './services/advverificator.service';
-
-
-
+import { NgDatepickerModule  } from "ng2-datepicker";
 
 
 @NgModule({
   imports: [
-    
-    DataTableModule,
+    NgDatepickerModule,
     CommonModule,
     BrowserAnimationsModule,
-    // BrowserModule,
     NoopAnimationsModule,
     AppRoutingModule,
     AppAsideModule,
