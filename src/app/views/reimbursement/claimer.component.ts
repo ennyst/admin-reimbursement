@@ -29,6 +29,11 @@ export class ClaimerComponent implements OnInit{
   }
   
   settings = {
+    actions:{
+      add:false,
+      edit:false
+    },
+
       columns: {
         id: {
           title: 'ID',

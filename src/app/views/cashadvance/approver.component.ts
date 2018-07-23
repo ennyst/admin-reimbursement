@@ -30,6 +30,9 @@ export class ApproverComponent implements OnInit{
     }
     
     settings = {
+      actions:{
+        edit:false
+      },
         columns: {
           id: {
             title: 'ID',

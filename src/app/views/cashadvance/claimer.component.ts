@@ -30,6 +30,10 @@ export class ClaimerComponent implements OnInit{
       }
       
       settings = {
+        actions:{
+          
+          delete:false
+        },
           columns: {
             id: {
               title: 'ID',

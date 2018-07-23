@@ -31,10 +31,17 @@ export class TeamComponent implements OnInit{
     console.log(e.data);
     this.data.remove(e.data)
   }
-  
+
   settings = {
+    actions:{
+      add:false,
+      edit:false,
+      delete:false
+    },
       columns: {
+
         id: {
+        
           title: 'ID',
           editable: false,
         },
