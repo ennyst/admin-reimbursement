@@ -64,5 +64,9 @@ export class UrlService {
    getReimbursementFinance():string{
        return this.urlReimbursementFinance;
    }
+   urlChart: string="https://jsonplaceholder.typicode.com/users";
+   getChart():string{
+       return this.urlChart;
+   }
 
 }
