@@ -12,11 +12,7 @@ import { RegisterComponent } from './views/register/register.component';
 export const routes: Routes = [
   {
     path: '',
-<<<<<<< HEAD
-    redirectTo: 'login',
-=======
     redirectTo: 'login', //dashboard
->>>>>>> b90696ab0ce51ac96f337554c933c0e6bdb74244
     pathMatch: 'full',
   },
   {
