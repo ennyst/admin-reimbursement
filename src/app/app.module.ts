@@ -52,7 +52,14 @@ import { ExpenseCategoryService } from "./services/expensecategory.service";
 import { TagService } from "./services/tag.service";
 import { AdvFinanceService } from './services/advfinance.service';
 import { AdvVerificatorService } from './services/advverificator.service';
+<<<<<<< HEAD
 import { NgDatepickerModule  } from "ng2-datepicker";
+=======
+import { ReimbursementClaimerService } from "./services/reimbursementclaimer.service";
+import { ReimbursementApproverService } from './services/reimbursementapprover.service';
+import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
+
+>>>>>>> b90696ab0ce51ac96f337554c933c0e6bdb74244
 
 
 @NgModule({
@@ -93,8 +100,16 @@ import { NgDatepickerModule  } from "ng2-datepicker";
     TagService,
     AdvFinanceService,
     AdvVerificatorService,
+<<<<<<< HEAD
     ExpenseCategoryService
   ],
+=======
+    ReimbursementClaimerService,
+    ReimbursementApproverService,
+    ReimbursementFinanceService,
+    ExpenseCategoryService],
+
+>>>>>>> b90696ab0ce51ac96f337554c933c0e6bdb74244
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
