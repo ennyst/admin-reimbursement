@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ReimbursementClaimerService } from "../../services/reimbursementclaimer.service";
+import { ReimbursementApproverService } from "../../services/reimbursementapprover.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
-  templateUrl: 'claimer.component.html'
+  templateUrl: 'approver.component.html'
 })
-export class ClaimerComponent implements OnInit{
+export class ApproverComponent implements OnInit{
 
   data:LocalDataSource;
-  constructor(private reimbursementClaimerService: ReimbursementClaimerService) {
+  constructor(private reimbursementApproverService: ReimbursementApproverService) {
     this.data = new LocalDataSource()
    }
    ngOnInit(){
-    this.reimbursementClaimerService.getReimbursementClaimerUserList().subscribe(response=>{
+    this.reimbursementApproverService.getReimbursementApproverUserList().subscribe(response=>{
       this.data.load(response);
     },error=>{alert("error")}
     )

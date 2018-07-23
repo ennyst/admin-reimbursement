@@ -50,4 +50,23 @@ export class UrlService {
        return this.urlAdvVerificator;
    }
 
+   urlReimbursementClaimer: string="https://jsonplaceholder.typicode.com/users";
+   getReimbursementClaimer():string{
+       return this.urlReimbursementClaimer;
+   }
+
+   urlReimbursementApprover: string="https://jsonplaceholder.typicode.com/users";
+   getReimbursementApprover():string{
+       return this.urlReimbursementApprover;
+   }
+
+   urlReimbursementFinance: string="https://jsonplaceholder.typicode.com/users";
+   getReimbursementFinance():string{
+       return this.urlReimbursementFinance;
+   }
+   urlChart: string="https://jsonplaceholder.typicode.com/users";
+   getChart():string{
+       return this.urlChart;
+   }
+
 }

@@ -66,8 +66,8 @@ export const navItems = [
         icon: 'icon-puzzle'
       },
       {
-        name: 'Approval',
-        url: '/reimbursement/approval',
+        name: 'Approver',
+        url: '/reimbursement/approver',
         icon: 'icon-puzzle'
       },
       {

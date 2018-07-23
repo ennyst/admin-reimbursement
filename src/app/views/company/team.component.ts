@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { TeamService } from "../../services/team.service";
 import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
+import { Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class TeamComponent implements OnInit{
     )
   }
 
-  
+ 
+
   editData(e?){
     console.log(e);
     console.log(this.data)
