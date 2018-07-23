@@ -92,13 +92,14 @@ export const navItems = [
         icon: 'icon-cursor'
       },
       {
-        name: 'Finance',
-        url: '/cashadvance/finance',
+        name: 'Verificator',
+        url: '/cashadvance/verificator',
         icon: 'icon-cursor'
       },
       {
-        name: 'Verificator',
-        url: '/cashadvance/verificator',
+        
+        name: 'Finance',
+        url: '/cashadvance/finance',
         icon: 'icon-cursor'
       }
     ]
