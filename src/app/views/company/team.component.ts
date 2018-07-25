@@ -2,12 +2,15 @@ import { Component,OnInit } from '@angular/core';
 import { TeamService } from "../../services/team.service";
 import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
 import { Router, NavigationEnd } from '@angular/router';
-
+import { ModalDirective } from 'ngx-bootstrap/modal';
 
 @Component({
   templateUrl: 'team.component.html'
 })
 export class TeamComponent implements OnInit{
+    public myModal;
+    public largeModal;
+
   data: LocalDataSource;
     constructor(private teamService: TeamService) { 
       this.data = new LocalDataSource()
@@ -46,14 +49,14 @@ export class TeamComponent implements OnInit{
           editable: false,
         },
         name: {
-          title: 'Full Name'
+          title: 'Team'
           
         },
         username: {
-          title: 'Username'
+          title: 'Create Date'
         },
         email: {
-          title: 'Email'
+          title: 'Update Date'
         }
       },
       mode: 'inline',

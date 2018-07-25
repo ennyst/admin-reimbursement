@@ -9,7 +9,8 @@ import { TagComponent } from "./tag.component";
 import { TeamComponent } from "./team.component";
 
 import { Ng2SmartTableModule } from "ng2-smart-table";
-
+// Modal Component
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 // Components Routing
@@ -19,6 +20,7 @@ import { CompanyRoutingModule } from './company-routing.module';
   imports: [
     CompanyRoutingModule,
     Ng2SmartTableModule,
+    ModalModule.forRoot()
    
   ],
   declarations: [
