@@ -1,16 +1,17 @@
 
 <div class="animated fadeIn">
     
-    <div class="col-md-12 mg-auto">
-      <img src="assets/img/icon/icons8-sum-90.png" class="iconadd" data-toggle="modal" (click)="largeModal.show()"/>
+    <div  class="mg-auto"  align="center">
+      <img src="assets/img/icon/icons8-sum-90.png"  data-toggle="modal" (click)="largeModal.show()"/>
+      <p>Add Team</p>
     </div><!--/.col-->
-    <div class="textadd">Add Team </div><br/>
+    
 
     <div class="card">
         <div class="card-header">Teams </div>
         <div class="card-body">
           <ng2-smart-table  [settings]="settings" (editConfirm)="editData($event)" (delete)="deleteConfirm($event)" [source]="data"></ng2-smart-table>
-        /div>
+        
     </div>
       
       <button (click)="editData()">hahah</button>
