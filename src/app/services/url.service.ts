@@ -35,10 +35,21 @@ export class UrlService {
        return this.urlTag;
    }
    
+   
+
+
+
    urlAdvClaimer: string="http://139.255.131.112:8989/jabatanall";
    getUrlAdvClaimer():string{
        return this.urlAdvClaimer;
    }
+
+   urlPostAdvClaimer: string="http://139.255.131.112:8989/insertjabatan";
+   postUrlAddAdvClaimer():string{
+       return this.urlPostAdvClaimer;
+   }
+
+
 
    urlAdvFinance: string="https://jsonplaceholder.typicode.com/users";
    getAdvFinance():string{

@@ -9,6 +9,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 export class ApproverComponent implements OnInit{
     // data:any=[];
     data: LocalDataSource;
+    
     constructor(private advApproverService: AdvAprService) { 
       this.data = new LocalDataSource()
     }

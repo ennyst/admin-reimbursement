@@ -3,10 +3,19 @@ import { Component,OnInit } from '@angular/core';
 import { AdvClaimerService } from "../../services/advclaimer.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
+
+import { ModelAdvClaimer } from "../../models/advclaimer.model";
+
 @Component({
     templateUrl:'claimer.component.html'
 })
 export class ClaimerComponent implements OnInit{
+    MAC : ModelAdvClaimer[];
+    errorMessage: String;
+    jabatanName:String;
+    jabatan = new ModelAdvClaimer();
+
+    
     data: LocalDataSource;
     constructor(private advCService : AdvClaimerService) { 
         this.data = new LocalDataSource()
@@ -15,9 +24,24 @@ export class ClaimerComponent implements OnInit{
     ngOnInit(){
         this.advCService.getAdvClaimerList().subscribe(response=>{
             this.data.load(response);
-          },error=>{alert("error")}
-          )
+          }
+            ,error=>{alert("error")}
+          
+        )
+
+        
+          
     }
+
+    // insertConfirm(): void {
+    //   this.advCService.addAdvClaimer(this.jabatan)
+    //     .subscribe( jabatan => {
+    //                this.ngOnInit();					   
+    //     },
+    //                       error => this.errorMessage = <any>error);
+    // }
+
+    
 
     editData(e?){
         console.log(e);
@@ -41,7 +65,7 @@ export class ClaimerComponent implements OnInit{
               editable: false,
             },
             nama_jabatan: {
-              title: 'Full Name'
+              title: 'Nama Jabatan'
               
             }
           },

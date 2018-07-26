@@ -56,6 +56,7 @@ import { AdvVerificatorService } from './services/advverificator.service';
 import { ReimbursementClaimerService } from "./services/reimbursementclaimer.service";
 import { ReimbursementApproverService } from './services/reimbursementapprover.service';
 import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
+import { modelApiAdvClaimer } from './models/advaprover.model';
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
 // import { MatNativeDateModule, MatDatepickerModule } from '@angular/material';
