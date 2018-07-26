@@ -24,10 +24,7 @@ export class UrlService {
    getUrlEmployee():string{
        return this.urlEmployee;
    }
-   urlAdvClaimer: string="https://jsonplaceholder.typicode.com/users";
-   getUrlAdvClaimer():string{
-       return this.urlAdvClaimer;
-   }
+   
    urlExpenseCategory: string="https://jsonplaceholder.typicode.com/users";
    getUrlExpenseCategory():string{
        return this.urlExpenseCategory;
@@ -38,7 +35,10 @@ export class UrlService {
        return this.urlTag;
    }
    
-
+   urlAdvClaimer: string="http://139.255.131.112:8989/jabatanall";
+   getUrlAdvClaimer():string{
+       return this.urlAdvClaimer;
+   }
 
    urlAdvFinance: string="https://jsonplaceholder.typicode.com/users";
    getAdvFinance():string{

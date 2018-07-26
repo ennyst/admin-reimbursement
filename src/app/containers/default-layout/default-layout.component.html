@@ -1,9 +1,11 @@
 <app-header
+  
   [fixed]="true"
   [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'Logo'}"
   [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
   [sidebarToggler]="'lg'"
   [asideMenuToggler]="'lg'">
+ 
   <ul class="nav navbar-nav d-md-down-none">
     <li class="nav-item px-3">
       <a class="nav-link" href="#">Dashboard</a>
@@ -77,18 +79,33 @@
         <div class="list-group list-group-accent">
           <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
           <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
-            <div class="avatar float-right">
+            
+            <div  align="center">
+              
+              <img class="img-avatar"  src="assets/img/brand/Picturetime.png" alt="img-Time">
+            </div>
+           <br/>
+            <div  align="center">
+              <img class="img-avatar"  src="assets/img/brand/PictureXpanse.png" alt="img-Expanse">
+            </div>
+            <br/> 
+
+
+
+            <!-- <div class="avatar float-right">
               <img class="img-avatar" src="assets/img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
             </div>
+           
+
             <div>Meeting with
               <strong>Lucas</strong>
             </div>
             <small class="text-muted mr-3">
               <i class="icon-calendar"></i>  1 - 3pm</small>
             <small class="text-muted">
-              <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+              <i class="icon-location-pin"></i>  Palo Alto, CA</small> -->
           </div>
-          <div class="list-group-item list-group-item-accent-info">
+          <!-- <div class="list-group-item list-group-item-accent-info">
             <div class="avatar float-right">
               <img class="img-avatar" src="assets/img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
             </div>
@@ -99,8 +116,8 @@
               <i class="icon-calendar"></i>  4 - 5pm</small>
             <small class="text-muted">
               <i class="icon-social-skype"></i>  On-line</small>
-          </div>
-          <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Tomorrow</div>
+          </div> -->
+          <!-- <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Tomorrow</div>
           <div class="list-group-item list-group-item-accent-danger list-group-item-divider">
             <div>New UI Project -
               <strong>deadline</strong>
@@ -126,16 +143,16 @@
                 <img class="img-avatar" src="assets/img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
               </div>
             </div>
-          </div>
-          <div class="list-group-item list-group-item-accent-success list-group-item-divider">
+          </div> -->
+          <!-- <div class="list-group-item list-group-item-accent-success list-group-item-divider">
             <div>
               <strong>#10 Startups.Garden</strong> Meetup</div>
             <small class="text-muted mr-3">
               <i class="icon-calendar"></i>  1 - 3pm</small>
             <small class="text-muted">
               <i class="icon-location-pin"></i>  Palo Alto, CA</small>
-          </div>
-          <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
+          </div> -->
+          <!-- <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
             <div>
               <strong>Team meeting</strong>
             </div>
@@ -166,9 +183,11 @@
                 <img class="img-avatar" src="assets/img/avatars/8.jpg" alt="admin@bootstrapmaster.com">
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </tab>
+
+      
       <tab>
         <ng-template tabHeading><i class="icon-speech"></i></ng-template>
         <div class="p-3">

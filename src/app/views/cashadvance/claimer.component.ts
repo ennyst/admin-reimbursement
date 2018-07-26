@@ -34,20 +34,15 @@ export class ClaimerComponent implements OnInit{
           
           delete:false
         },
+
           columns: {
             id: {
               title: 'ID',
               editable: false,
             },
-            name: {
+            nama_jabatan: {
               title: 'Full Name'
               
-            },
-            username: {
-              title: 'User Name'
-            },
-            email: {
-              title: 'Email'
             }
           },
           mode: 'inline',
