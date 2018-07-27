@@ -182,13 +182,33 @@ export const navItems = [
         icon: 'icon-puzzle'
       },
       {
+        name: 'Expense Category',
+        url: '/administrasi/jabatan',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Role Login',
+        url: '/administrasi/jabatan',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Role ',
+        url: '/administrasi/jabatan',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Status',
+        url: '/administrasi/jabatan',
+        icon: 'icon-puzzle'
+      },
+      {
         name: 'Akun Bank',
         url: '/administrasi/akunbank',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Tag',
-        url: '/administrasi/tag',
+        name: 'Libur',
+        url: '/administrasi/libur',
         icon: 'icon-puzzle'
       }
     ]
