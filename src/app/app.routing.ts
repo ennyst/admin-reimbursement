@@ -110,11 +110,12 @@ export const routes: Routes = [
       {
         path:'administrasi',
         loadChildren:'./views/administrasi/administrasi.module#AdministrasiModule'
-      },  
+      },
       {
         path:'attendance',
-        loadChildren:'./views/attendance/attendance.module#AttendanceModule'
-      }   
+        loadChildren:'./views/attendance/attendance-module#AttendanceModule'
+      },
+      
     ]
   }
 ];
