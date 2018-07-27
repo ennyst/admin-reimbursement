@@ -202,8 +202,8 @@ export const navItems = [
         icon: 'icon-puzzle'
       },
       {
-        name: 'Akun Bank',
-        url: '/administrasi/akunbank',
+        name: 'Account Bank',
+        url: '/administrasi/accountbank',
         icon: 'icon-puzzle'
       },
       {
