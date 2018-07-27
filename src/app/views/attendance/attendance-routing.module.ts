@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { AttendanceClaimerComponent } from "./claimer.component";
+import { AttClaimerComponent } from './claimer.component';
+import { AttMonitorComponent } from './monitor.component';
+import { AttConfigComponent } from './config.component';
 
 
 
@@ -14,11 +15,26 @@ const routes: Routes = [
     children: [
       {
         path: 'attendanceclaimer',
-        component: AttendanceClaimerComponent,
+        component: AttClaimerComponent,
         data:{
           title: 'Claimer'
         }
-      }
+      },
+      {
+        path: 'attendancemonitor',
+        component: AttMonitorComponent,
+        data:{
+          title: 'Monitor'
+        }
+      },
+      {
+        path: 'attendanceconfig',
+        component: AttConfigComponent,
+        data:{
+          title: 'Config'
+        }
+      },
+
       
     ]
   }

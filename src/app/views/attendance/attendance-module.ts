@@ -2,29 +2,23 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
-
-
-import { AttendanceClaimerComponent } from "./claimer.component";
-import { Ng2SmartTableModule } from "ng2-smart-table";
-// Modal Component
-import { ModalModule } from 'ngx-bootstrap/modal';
-
-
-
 import { AttendanceRoutingModule } from './attendance-routing.module';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { AttClaimerComponent } from './claimer.component';
+import { AttConfigComponent } from './config.component';
+import { AttMonitorComponent } from './monitor.component';
+
 
 @NgModule({
   imports: [
     AttendanceRoutingModule,
-    Ng2SmartTableModule,
-    ModalModule.forRoot()
+    Ng2SmartTableModule
    
   ],
   declarations: [
- 
-    AttendanceClaimerComponent,
-   
+    AttClaimerComponent,
+    AttConfigComponent,
+    AttMonitorComponent
   ]
 })
 export class AttendanceModule { }

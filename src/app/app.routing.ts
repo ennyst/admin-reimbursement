@@ -106,7 +106,15 @@ export const routes: Routes = [
       {
         path:'report',
         loadChildren:'./views/report/report.module#ReportModule'
-      }    
+      },
+      {
+        path:'administrasi',
+        loadChildren:'./views/administrasi/administrasi.module#AdministrasiModule'
+      },  
+      {
+        path:'attendance',
+        loadChildren:'./views/attendance/attendance.module#AttendanceModule'
+      }   
     ]
   }
 ];

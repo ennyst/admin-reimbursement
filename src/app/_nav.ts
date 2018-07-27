@@ -133,17 +133,17 @@ export const navItems = [
     children: [
       {
         name: 'Claimer',
-        url: '/attendance/claimer',
+        url: '/attendance/attendanceclaimer',
         icon: 'icon-puzzle'
       },
       {
         name: 'Monitor',
-        url: '/attendance/carousels',
+        url: '/attendance/attendancemonitor',
         icon: 'icon-puzzle'
       },
       {
         name: 'Config',
-        url: '/attendance/config',
+        url: '/attendance/attendanceconfig',
         icon: 'icon-puzzle'
       }
     ]
@@ -166,6 +166,7 @@ export const navItems = [
     title: true,
     name: 'Adminstrasi'
   },
+  
   {
     name: 'Administrasi',
     url: '/administrasi',

@@ -8,9 +8,9 @@ import { Http, Response } from '@angular/http';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
-    templateUrl:'claimer.component.html'
+    templateUrl:'monitor.component.html'
 })
-export class AttClaimerComponent implements OnInit{
+export class AttMonitorComponent implements OnInit{
     
 
     
