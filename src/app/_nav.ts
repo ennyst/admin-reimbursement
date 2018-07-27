@@ -26,7 +26,7 @@ export const navItems = [
   // },
   {
     title: true,
-    name: 'Reimbursement'
+    name: 'Menu'
   },
   {
     name: 'Company',
@@ -104,28 +104,9 @@ export const navItems = [
       }
     ]
   },
-  {
-    name:'Report',
-    url:'/report',
-    icon:'icon-star',
-    children:[
-      {
-        name: 'Reimbursement',
-        url: '/report/reportreimbursement',
-        icon:'icon-star'
-      },
-      {
-        name: 'Cash Advance',
-        url: '/report/reportcashadvance',
-        icon:'icon-star'
-      }
-    ]
-  },
+ 
 
-  {
-    title: true,
-    name: 'Attendance'
-  },
+ 
   {
     name: 'Attendance',
     url: '/attendance',
@@ -148,25 +129,35 @@ export const navItems = [
       }
     ]
   },
+
   {
-    name: 'Report',
-    url: '/reportatendance',
-    icon: 'icon-puzzle',
-    children: [
+    name:'Report',
+    url:'/report',
+    icon:'icon-star',
+    children:[
+      {
+        name: 'Reimbursement',
+        url: '/report/reportreimbursement',
+        icon:'icon-star'
+      },
+      {
+        name: 'Cash Advance',
+        url: '/report/reportcashadvance',
+        icon:'icon-star'
+      },
       {
         name: 'Attendance',
-        url: '/reportatendance/attendance',
-        icon: 'icon-puzzle'
+        url: '/report/reportattendance',
+        icon:'icon-star'
       }
     ]
   },
-
 
   {
     title: true,
     name: 'Adminstrasi'
   },
-  
+
   {
     name: 'Administrasi',
     url: '/administrasi',

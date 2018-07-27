@@ -23,6 +23,7 @@ import { PaginationsComponent } from "../base/paginations.component";
 import { PopoversComponent } from "../base/popovers.component";
 import { ProgressComponent } from "../base/progress.component";
 import { TooltipsComponent } from "../base/tooltips.component";
+import { ReportAttendanceComponent } from "./reportattendance.component";
 
 @NgModule({
     imports:[
@@ -41,6 +42,7 @@ import { TooltipsComponent } from "../base/tooltips.component";
     declarations:[
         ReportCashadvanceComponent,
         ReportReimbursementComponent,
+        ReportAttendanceComponent
 
         
         
