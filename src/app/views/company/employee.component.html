@@ -63,13 +63,40 @@
             <label class="col-md-2 col-form-label" for="name-input">Employee Type</label>
             <div class="form-group col-md-10">
               <select class="form-control" id="employeetypeid">
-                <option>On S</option>
-                <option>Meals</option>
-                <option>Entertainment</option>
-                <option>Telecomunication</option>
+                <option>On Site</option>
+                <option>Mobile</option>
               </select>
             </div>
         </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="name-input">Role</label>
+          <div class="form-group col-md-10">
+            <select class="form-control" id="roleid">
+              <option>User</option>
+              <option>CEO</option>
+              <option>Admin Finance</option>
+              <option>System Admin</option>
+              <option>Verificator</option>
+              <option>Approval</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="name-input">Account Bank</label>
+          <div class="col-md-10">
+            <input type="text" id="accountbank" name="status" class="form-control" placeholder="Account Bank">
+          </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label" for="name-input">Venue</label>
+        <div class="form-group col-md-10">
+          <select class="form-control" id="venueid">
+            <option>Office A</option>
+            <option>Office B</option>
+            
+          </select>
+        </div>
+      </div>
       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" (click)="largeModal.hide()">Close</button>
