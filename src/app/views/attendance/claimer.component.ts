@@ -12,7 +12,7 @@ export class AttendanceClaimerComponent implements OnInit{
     this.data = new LocalDataSource()
    }
    ngOnInit(){
-    this.AttendanceClaimerService .getAttendanceClaimerUserList().subscribe(response=>{
+    this.AttendanceClaimerService .getAttendanceClaimerList().subscribe(response=>{
       this.data.load(response);
     },error=>{alert("error")}
     )
