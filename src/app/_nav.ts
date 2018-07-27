@@ -207,7 +207,7 @@ export const navItems = [
         icon: 'icon-puzzle'
       },
       {
-        name: 'Libur',
+        name: 'Libur', 
         url: '/administrasi/libur',
         icon: 'icon-puzzle'
       }
