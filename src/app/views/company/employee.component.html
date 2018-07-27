@@ -12,7 +12,7 @@
         
     </div>
     <button (click)="editData()">hahah</button>
-</div>
+    </div>
 <div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -59,6 +59,15 @@
               </select>
             </div>
         </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="name-input">Position</label>
+          <div class="form-group col-md-10">
+            <select class="form-control" id="positionid">
+              <option>IT</option>
+              <option>HR</option>
+            </select>
+          </div>
+      </div>
         <div class="form-group row">
             <label class="col-md-2 col-form-label" for="name-input">Employee Type</label>
             <div class="form-group col-md-10">
