@@ -5,9 +5,9 @@
       </div>
       <div class="card-body">
         
-        <ng2-smart-table [settings]="settings" (editConfirm)="editData($event)" (delete)="deleteConfirm($event)"  [source]="data"></ng2-smart-table>
+        <ng2-smart-table [settings]="settings" (createConfirm)="addRecord($event)" (editConfirm)="editData($event)" (deleteConfirm)="deleteRecord($event)"  [source]="data"></ng2-smart-table>
         </div>
     </div>
-    <button (click)="editData()">hahah</button>
+    <button (click)="cek()">hahah</button>
 </div>
         

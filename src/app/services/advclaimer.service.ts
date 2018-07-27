@@ -23,26 +23,24 @@ export class AdvClaimerService {
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }
 
-     addAdvClaimer(advmodel:ModelAdvClaimer): Observable<ModelAdvClaimer> {
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
-        return this.http.post(this.urlService.postUrlAddAdvClaimer(),advmodel )
-                   .map(this.extractData)
-                   .catch(this.handleErrorObservable);
+     addAdvClaimer(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlAddAdvClaimer() + param,param )
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
     } 
+      
+    editAdvClaimer(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlEditAdvClaimer() + param,param )
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
+    }
 
-    //  postAddClaimer():Observable<any[]>{
-    //      return this.http.post(); 
-    //  }
+    deleteAdvClaimer(param) : Observable<any>{
+        return this.http.post(this.urlService.postUrlDeleteClaimer() + param,param )
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
+    }
 
-    //  postUrlAddAdvClaimer(id:number): string {
-    //     return this.http.post + "http://139.255.131.112:8989/insertjabatan?nama_jabatan=Staff"
-    //     .map((res: Response) => res.json())
-    //           .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-    // }
-    
-
-   
 
      private extractData(res:Response) {
         let body = res.json();

@@ -64,6 +64,8 @@ import { modelApiAdvClaimer } from './models/advaprover.model';
 // import { BrowserModule } from '@angular/platform-browser';
 // import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 
+// import { NgDatepickerModule } from 'ng2-datepicker';
+
 @NgModule({
   imports: [
     // BsDatepickerModule.forRoot(),
@@ -71,6 +73,7 @@ import { modelApiAdvClaimer } from './models/advaprover.model';
     // MatDatepickerModule,
     // MatNativeDateModule,
     // AngularDateTimePickerModule, 
+    // NgDatepickerModule,
     DataTableModule,
     CommonModule,
     BrowserAnimationsModule,

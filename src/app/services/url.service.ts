@@ -5,10 +5,27 @@ import { Observable } from 'rxjs/Rx';
 export class UrlService {
    constructor() {
    }
-//    serverUrl: string ="http://mtpc583:8080/api";
-//    getUrlUsers(): string {
-//       return this.serverUrl + "/secure/user/";
-//    }
+    serverUrl: string ="http://139.255.131.112:8989";
+
+    
+
+   getUrlAdvClaimer():string{
+    return this.serverUrl + "/jabatanall"
+    }
+
+    postUrlAddAdvClaimer():string{
+        return this.serverUrl + "/insertjabatan";
+    }
+
+    postUrlEditAdvClaimer():string{
+        return this.serverUrl + "/updatejabatan"
+    }
+    postUrlDeleteClaimer():string{
+        return this.serverUrl + "/deletejabatan"
+    }
+
+
+
 
    urlAdvApprover: string="https://jsonplaceholder.typicode.com/users";
    getUrlAdvApprover():string{
@@ -36,18 +53,6 @@ export class UrlService {
    }
    
    
-
-
-
-   urlAdvClaimer: string="http://139.255.131.112:8989/jabatanall";
-   getUrlAdvClaimer():string{
-       return this.urlAdvClaimer;
-   }
-
-   urlPostAdvClaimer: string="http://139.255.131.112:8989/insertjabatan";
-   postUrlAddAdvClaimer():string{
-       return this.urlPostAdvClaimer;
-   }
 
 
 
