@@ -23,7 +23,7 @@ export class TeamComponent implements OnInit{
     )
   }
 
- 
+  
 
   editData(e?){
     console.log(e);
