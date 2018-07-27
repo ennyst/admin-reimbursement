@@ -124,7 +124,7 @@ export const navItems = [
 
   {
     title: true,
-    name: 'Attandance'
+    name: 'Attendance'
   },
   {
     name: 'Attendance',

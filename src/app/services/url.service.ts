@@ -26,7 +26,6 @@ export class UrlService {
 
 
 
-
    urlAdvApprover: string="https://jsonplaceholder.typicode.com/users";
    getUrlAdvApprover():string{
        return this.urlAdvApprover;
@@ -52,6 +51,10 @@ export class UrlService {
        return this.urlTag;
    }
    
+   urlAttendanceClaimer: string="https://jsonplaceholder.typicode.com/users";
+   getUrlAttendanceClaimer():string{
+       return this.urlAttendanceClaimer;
+   }
    
 
 

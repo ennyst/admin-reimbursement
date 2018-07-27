@@ -57,6 +57,7 @@ import { ReimbursementClaimerService } from "./services/reimbursementclaimer.ser
 import { ReimbursementApproverService } from './services/reimbursementapprover.service';
 import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
 import { modelApiAdvClaimer } from './models/advaprover.model';
+import { AttendanceClaimerService } from './services/attendanceclaimer.service';
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
 // import { MatNativeDateModule, MatDatepickerModule } from '@angular/material';
@@ -107,6 +108,7 @@ import { modelApiAdvClaimer } from './models/advaprover.model';
     AdvAprService,
     UrlService,
     TeamService,
+    AttendanceClaimerService,
     EmployeeService,
     AdvClaimerService,
     TagService,

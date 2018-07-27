@@ -106,7 +106,7 @@ export const routes: Routes = [
       {
         path:'report',
         loadChildren:'./views/report/report.module#ReportModule'
-      }      
+      }    
     ]
   }
 ];
