@@ -115,7 +115,8 @@ import { modelApiAdvClaimer } from './models/advaprover.model';
     ReimbursementClaimerService,
     ReimbursementApproverService,
     ReimbursementFinanceService,
-    ExpenseCategoryService],
+    ExpenseCategoryService
+  ],
 
   bootstrap: [ AppComponent ]
 })
