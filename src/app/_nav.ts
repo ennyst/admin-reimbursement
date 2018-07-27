@@ -178,32 +178,32 @@ export const navItems = [
       },
       {
         name: 'Type Employee',
-        url: '/administrasi/jabatan',
+        url: '/administrasi/typeemployee',
         icon: 'icon-puzzle'
       },
       {
         name: 'Expense Category',
-        url: '/administrasi/jabatan',
+        url: '/administrasi/expansecategory',
         icon: 'icon-puzzle'
       },
       {
         name: 'Role Login',
-        url: '/administrasi/jabatan',
+        url: '/administrasi/rolelogin',
         icon: 'icon-puzzle'
       },
       {
         name: 'Role ',
-        url: '/administrasi/jabatan',
+        url: '/administrasi/role',
         icon: 'icon-puzzle'
       },
       {
         name: 'Status',
-        url: '/administrasi/jabatan',
+        url: '/administrasi/status',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Akun Bank',
-        url: '/administrasi/akunbank',
+        name: 'Account Bank',
+        url: '/administrasi/accountbank',
         icon: 'icon-puzzle'
       },
       {

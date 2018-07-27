@@ -117,7 +117,8 @@ import { AttendanceClaimerService } from './services/attendanceclaimer.service';
     ReimbursementClaimerService,
     ReimbursementApproverService,
     ReimbursementFinanceService,
-    ExpenseCategoryService],
+    ExpenseCategoryService
+  ],
 
   bootstrap: [ AppComponent ]
 })
