@@ -26,7 +26,7 @@ export const navItems = [
   // },
   {
     title: true,
-    name: 'Menu'
+    name: 'Reimbursement'
   },
   {
     name: 'Company',
@@ -121,6 +121,79 @@ export const navItems = [
       }
     ]
   },
+
+  {
+    title: true,
+    name: 'Attandance'
+  },
+  {
+    name: 'Attendance',
+    url: '/attendance',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'Claimer',
+        url: '/attendance/claimer',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Monitor',
+        url: '/attendance/carousels',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Config',
+        url: '/attendance/config',
+        icon: 'icon-puzzle'
+      }
+    ]
+  },
+  {
+    name: 'Report',
+    url: '/reportatendance',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'Attendance',
+        url: '/reportatendance/attendance',
+        icon: 'icon-puzzle'
+      }
+    ]
+  },
+
+
+  {
+    title: true,
+    name: 'Adminstrasi'
+  },
+  {
+    name: 'Administrasi',
+    url: '/administrasi',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'Jabatan',
+        url: '/administrasi/jabatan',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Type Employee',
+        url: '/administrasi/jabatan',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Akun Bank',
+        url: '/administrasi/akunbank',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Tag',
+        url: '/administrasi/tag',
+        icon: 'icon-puzzle'
+      }
+    ]
+  },
+  
   // {
   //   title: true,
   //   name: 'Components'
