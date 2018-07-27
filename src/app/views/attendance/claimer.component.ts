@@ -10,6 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
     templateUrl:'claimer.component.html'
 })
+<<<<<<< HEAD
 export class AttClaimerComponent implements OnInit{
     
 
@@ -67,6 +68,30 @@ export class AttClaimerComponent implements OnInit{
     cek(){
       console.log(this.data)
     }
+=======
+export class AttendanceClaimerComponent implements OnInit{
+
+  data:LocalDataSource;
+  constructor(private AttendanceClaimerService : AttendanceClaimerService) {
+    this.data = new LocalDataSource()
+   }
+   ngOnInit(){
+    this.AttendanceClaimerService .getAttendanceClaimerList().subscribe(response=>{
+      this.data.load(response);
+    },error=>{alert("error")}
+    )
+   }
+
+   editData(e?){
+    console.log(e);
+    console.log(this.data)
+  }
+
+  deleteConfirm(e?){
+    console.log(e.data);
+    this.data.remove(e.data)
+  }
+>>>>>>> befffd39779638bf52e4579e6c8512ed888993e6
   
     
       

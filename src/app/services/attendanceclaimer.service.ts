@@ -19,7 +19,7 @@ export class AttendanceClaimerService {
     //    this.opts = { headers : this.headers };
     }
 
-    getAttendanceClaimerUserList(): Observable<any[]> {
+    getAttendanceClaimerList(): Observable<any[]> {
         return this.http.get(this.urlService.getUrlAttendanceClaimer())
               .map((res: Response) => res.json())
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
