@@ -55,7 +55,14 @@ export class UrlService {
    getUrlAttendanceClaimer():string{
        return this.urlAttendanceClaimer;
    }
-   
+   urlAttendanceConfig: string="https://jsonplaceholder.typicode.com/users";
+   getUrlAttendanceConfig():string{
+       return this.urlAttendanceConfig;
+   }
+   urlAttendanceMonitor: string="https://jsonplaceholder.typicode.com/users";
+   getUrlAttendanceMonitor():string{
+       return this.urlAttendanceMonitor;
+   }
 
 
 

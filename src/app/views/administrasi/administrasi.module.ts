@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { Ng2SmartTableModule } from "ng2-smart-table";
-import { AdministrasiRoutingModule } from './admistrasi-routing.module';
+import { AdministrasiRoutingModule } from './administrasi-routing.module';
 import { AccountBankComponent } from './accountbank.component';
 import { ExpanseCategoryComponent } from './expansecategory.component';
 import { LiburComponent } from './libur.component';

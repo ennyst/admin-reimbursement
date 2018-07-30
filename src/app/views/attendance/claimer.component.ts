@@ -1,82 +1,18 @@
-
-import { Component,OnInit } from '@angular/core';
-import { AdvClaimerService } from "../../services/advclaimer.service";
+import { Component, OnInit } from '@angular/core';
+import { AttendanceClaimerService } from "../../services/attclaimer.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { Http, Response } from '@angular/http';
-
-import { HttpErrorResponse } from '@angular/common/http';
-
 @Component({
-    templateUrl:'claimer.component.html'
+  templateUrl: 'claimer.component.html'
 })
-<<<<<<< HEAD
 export class AttClaimerComponent implements OnInit{
-    
-
-    
-    data: LocalDataSource;
-    constructor(private advCService : AdvClaimerService, private http: Http) { 
-        this.data = new LocalDataSource()
-    }
-
-    ngOnInit(){
-        this.advCService.getAdvClaimerList().subscribe(response=>{
-            this.data.load(response);
-          }
-            ,error=>{alert("error")}
-          
-        ) 
-    }
-    
-
-    addRecord(event) {
-      console.log(event);
-      let param = "?nama_jabatan=" + event.newData.nama_jabatan;
-      console.log(param)
-      this.advCService.addAdvClaimer(param).subscribe(response => {
-        event.confirm.resolve(event.newData)  
-      }, error => {
-        alert(error.errorMessage)
-      })
-      
-    }
-
-    editData(event){
-      console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_jabatan=" + event.newData.nama_jabatan;
-       console.log(param)
-       this.advCService.editAdvClaimer(param).subscribe(response => {
-         event.confirm.resolve(event.newData)  
-       }, error => {
-         alert(error.errorMessage)
-       }) 
-
-    }
-
-    deleteRecord(event){
-      console.log(event);
-       let param = "?id=" + event.data.id+ "&nama_jabatan=" + event.data.nama_jabatan;
-       console.log(param)
-       this.advCService.deleteAdvClaimer(param).subscribe(response => {
-         event.confirm.resolve();
-       }, error => {
-         alert(error.errorMessage)
-       }) 
-    }
-
-    cek(){
-      console.log(this.data)
-    }
-=======
-export class AttendanceClaimerComponent implements OnInit{
 
   data:LocalDataSource;
-  constructor(private AttendanceClaimerService : AttendanceClaimerService) {
+  constructor(private attendanceClaimerService: AttendanceClaimerService) {
     this.data = new LocalDataSource()
    }
    ngOnInit(){
-    this.AttendanceClaimerService .getAttendanceClaimerList().subscribe(response=>{
+    this.attendanceClaimerService.getAttendanceClaimerList().subscribe(response=>{
       this.data.load(response);
     },error=>{alert("error")}
     )
@@ -91,29 +27,28 @@ export class AttendanceClaimerComponent implements OnInit{
     console.log(e.data);
     this.data.remove(e.data)
   }
->>>>>>> befffd39779638bf52e4579e6c8512ed888993e6
   
-    
-      
-      settings = {
-        // "actions": {
-        //   "delete": false
-        // },
-        "columns": {
-          "nama_jabatan": {
-            "title": "Nama Jabatan"
-          }
+  settings = {
+      columns: {
+        id: {
+          title: 'ID',
+          editable: false,
         },
-        "mode": "inline",
-        add:{
-          confirmCreate: true
+        name: {
+          title: 'Full Name'
+          
         },
-        edit:{
-          confirmSave:true
+        username: {
+          title: 'User Name'
         },
-        delete:{
-          confirmDelete:true
+        email: {
+          title: 'Email'
         }
+      },
+      mode: 'inline',
+      confirmSave: true,
+      confirmDelete:true
+    };
 
-      };
+
 }

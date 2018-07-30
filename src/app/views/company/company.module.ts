@@ -7,7 +7,6 @@ import { EmployeeComponent } from './employee.component';
 import { ExpenseCategoryComponent } from "./expensecategory.component";
 import { TagComponent } from "./tag.component";
 import { TeamComponent } from "./team.component";
-
 import { Ng2SmartTableModule } from "ng2-smart-table";
 // Modal Component
 import { ModalModule } from 'ngx-bootstrap/modal';
