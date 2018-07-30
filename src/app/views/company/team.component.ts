@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { TeamService } from "../../services/team.service";
-import { LocalDataSource } from '../../../../node_modules/ng2-smart-table';
+import { LocalDataSource } from 'ng2-smart-table';
 import { Router, NavigationEnd } from '@angular/router';
 import { ModalDirective } from 'ngx-bootstrap/modal';
 

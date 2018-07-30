@@ -1,6 +1,6 @@
 
 import { Component,OnInit } from '@angular/core';
-import { AdvClaimerService } from "../../services/advclaimer.service";
+import { AdmExpenseCategoryService } from "../../services/admexpensecategory.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
 import { Http, Response } from '@angular/http';
@@ -8,19 +8,19 @@ import { Http, Response } from '@angular/http';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
-    templateUrl:'expansecategory.component.html'
+    templateUrl:'expensecategory.component.html'
 })
-export class ExpanseCategoryComponent implements OnInit{
+export class ExpenseCategoryComponent implements OnInit{
     
 
     
     data: LocalDataSource;
-    constructor(private advCService : AdvClaimerService, private http: Http) { 
+    constructor(private admService : AdmExpenseCategoryService, private http: Http) { 
         this.data = new LocalDataSource()
     }
 
     ngOnInit(){
-        this.advCService.getAdvClaimerList().subscribe(response=>{
+        this.admService.getAdmExpenseCategoryList().subscribe(response=>{
             this.data.load(response);
           }
             ,error=>{alert("error")}
@@ -31,9 +31,9 @@ export class ExpanseCategoryComponent implements OnInit{
 
     addRecord(event) {
       console.log(event);
-      let param = "?nama_jabatan=" + event.newData.nama_jabatan;
+      let param = "?nama_expense=" + event.newData.nama_expense;
       console.log(param)
-      this.advCService.addAdvClaimer(param).subscribe(response => {
+      this.admService.addAdmExpenseCategory(param).subscribe(response => {
         event.confirm.resolve(event.newData)  
       }, error => {
         alert(error.errorMessage)
@@ -43,9 +43,9 @@ export class ExpanseCategoryComponent implements OnInit{
 
     editData(event){
       console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_jabatan=" + event.newData.nama_jabatan;
+       let param = "?id=" + event.newData.id + "&nama_expense=" + event.newData.nama_expense;
        console.log(param)
-       this.advCService.editAdvClaimer(param).subscribe(response => {
+       this.admService.editAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve(event.newData)  
        }, error => {
          alert(error.errorMessage)
@@ -55,9 +55,9 @@ export class ExpanseCategoryComponent implements OnInit{
 
     deleteRecord(event){
       console.log(event);
-       let param = "?id=" + event.data.id+ "&nama_jabatan=" + event.data.nama_jabatan;
+       let param = "?id=" + event.data.id+ "&nama_expense=" + event.data.nama_expense;
        console.log(param)
-       this.advCService.deleteAdvClaimer(param).subscribe(response => {
+       this.admService.deleteAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve();
        }, error => {
          alert(error.errorMessage)
@@ -75,8 +75,8 @@ export class ExpanseCategoryComponent implements OnInit{
         //   "delete": false
         // },
         "columns": {
-          "nama_jabatan": {
-            "title": "Nama Jabatan"
+          "nama_expense": {
+            "title": "Expense Name"
           }
         },
         "mode": "inline",

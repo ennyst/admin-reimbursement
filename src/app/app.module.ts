@@ -49,17 +49,19 @@ import { UrlService } from "./services/url.service";
 import { TeamService } from "./services/team.service";
 import { EmployeeService } from "./services/employee.service";
 import { AdvClaimerService } from './services/advclaimer.service';
-import { ExpenseCategoryService } from "./services/expensecategory.service";
+
 import { TagService } from "./services/tag.service";
 import { AdvFinanceService } from './services/advfinance.service';
 import { AdvVerificatorService } from './services/advverificator.service';
 import { ReimbursementClaimerService } from "./services/reimbursementclaimer.service";
 import { ReimbursementApproverService } from './services/reimbursementapprover.service';
 import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
-import { modelApiAdvClaimer } from './models/advaprover.model';
 import { AttendanceClaimerService } from './services/attclaimer.service';
 import { AttendanceConfigService } from "./services/attconfig.service";
 import { AttendanceMonitorService } from "./services/attmonitor.service";
+import { AdmPositionService } from "./services/admposition.service";
+import { AdmRoleService } from "./services/admrole.service";
+import { AdmExpenseCategoryService } from "./services/admexpensecategory.service";
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
 // import { MatNativeDateModule, MatDatepickerModule } from '@angular/material';
@@ -121,7 +123,9 @@ import { AttendanceMonitorService } from "./services/attmonitor.service";
     ReimbursementClaimerService,
     ReimbursementApproverService,
     ReimbursementFinanceService,
-    ExpenseCategoryService
+    AdmExpenseCategoryService,
+    AdmPositionService,
+    AdmRoleService
   ],
 
   bootstrap: [ AppComponent ]
