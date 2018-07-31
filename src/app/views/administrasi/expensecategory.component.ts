@@ -24,15 +24,16 @@ export class ExpenseCategoryComponent implements OnInit{
             this.data.load(response);
           }
             ,error=>{alert("error")}
-          
         ) 
     }
     
 
     addRecord(event) {
       console.log(event);
-      let param = "?nama_expense=" + event.newData.nama_expense;
-      console.log(param)
+      let param = "?namaExpense=" + event.newData.namaExpense; 
+      let param2 = "?budgetMaks=" +event.newData.budgetMaks;
+      let param3 = "?maksTransaksi" +event.newData.maksTransaksi;
+      console.log(param,param2,param3)
       this.admService.addAdmExpenseCategory(param).subscribe(response => {
         event.confirm.resolve(event.newData)  
       }, error => {
@@ -43,7 +44,7 @@ export class ExpenseCategoryComponent implements OnInit{
 
     editData(event){
       console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_expense=" + event.newData.nama_expense;
+       let param = "?id=" + event.newData.id + "&namaExpense=" + event.newData.namaExpense;
        console.log(param)
        this.admService.editAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve(event.newData)  
@@ -55,7 +56,7 @@ export class ExpenseCategoryComponent implements OnInit{
 
     deleteRecord(event){
       console.log(event);
-       let param = "?id=" + event.data.id+ "&nama_expense=" + event.data.nama_expense;
+       let param = "?id=" + event.data.id+ "&namaExpense=" + event.data.namaExpense;
        console.log(param)
        this.admService.deleteAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve();
@@ -67,16 +68,20 @@ export class ExpenseCategoryComponent implements OnInit{
     cek(){
       console.log(this.data)
     }
-  
-    
       
       settings = {
         // "actions": {
         //   "delete": false
         // },
         "columns": {
-          "nama_expense": {
-            "title": "Expense Name"
+          "namaExpense": {
+            "title": "Expense Category",
+          },
+          "budgetMaks": {
+            "title": "Budget Maksimum",
+          },
+          "maksTransaksi" :{
+            "title" : "Transaction Maksimum",
           }
         },
         "mode": "inline",

@@ -45,7 +45,7 @@ export class UrlService {
     }
     
     postUrlAddAdmPosition():string{
-        return this.serverUrl + "/insertjabatan"
+        return this.serverUrl + "/insertjabatan2"
     }
     
     postUrlEditAdmPosition():string{
@@ -55,20 +55,35 @@ export class UrlService {
     return this.serverUrl + "/deletejabatan"
     }
 
-
     getUrlAdmExpenseCategory():string{
         return this.serverUrl + "/expensekategoriall"
     }
         
     postUrlAddAdmExpenseCategory():string{
-        return this.serverUrl + "/insertexpensekategori"
+        return this.serverUrl + "/insertexpensekategori/"
     }
         
     postUrlEditAdmExpenseCategory():string{
-        return this.serverUrl + "/updateexpensekategori"
+        return this.serverUrl + "/updateexpensekategori/"
     }
     postUrlDeleteAdmExpenseCategory():string{
-        return this.serverUrl + "/deleteexpensekategori"
+        return this.serverUrl + "/deleteexpensekategori/"
+    }
+
+    
+    getUrlAdmStatus():string{
+        return this.serverUrl + "/statusall"
+    }
+        
+    postUrlAddAdmStatus():string{
+        return this.serverUrl + "/insertstatus"
+    }
+        
+    postUrlEditAdmStatus():string{
+        return this.serverUrl + "/updatestatus"
+    }
+    postUrlDeleteAdmStatus():string{
+        return this.serverUrl + "/deletestatus"
     }
 
 

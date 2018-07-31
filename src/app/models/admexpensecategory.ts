@@ -1,8 +1,8 @@
 export class ModelAdmExpenseCategory {
     id: number;
-    nama_expense: string;
-    budget_maks:number;
-    maks_transaksi:number;
+    namaExpense: string;
+    budgetMaks:number;
+    maksTransaksi:number;
     constructor() { 
     }
  } 
