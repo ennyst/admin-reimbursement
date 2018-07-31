@@ -1,16 +1,12 @@
-
-import { Component,OnInit } from '@angular/core';
-import { AdvClaimerService } from "../../services/advclaimer.service";
+import { Component, OnInit } from '@angular/core';
+import { AttendanceClaimerService } from "../../services/attclaimer.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { Http, Response } from '@angular/http';
-
-import { HttpErrorResponse } from '@angular/common/http';
-
 @Component({
-    templateUrl:'claimer.component.html'
+  templateUrl: 'claimer.component.html'
 })
 export class AttClaimerComponent implements OnInit{
+<<<<<<< HEAD
     
 
     
@@ -68,3 +64,51 @@ export class AttClaimerComponent implements OnInit{
       console.log(this.data)
     }
 }
+=======
+
+  data:LocalDataSource;
+  constructor(private attendanceClaimerService: AttendanceClaimerService) {
+    this.data = new LocalDataSource()
+   }
+   ngOnInit(){
+    this.attendanceClaimerService.getAttendanceClaimerList().subscribe(response=>{
+      this.data.load(response);
+    },error=>{alert("error")}
+    )
+   }
+
+   editData(e?){
+    console.log(e);
+    console.log(this.data)
+  }
+
+  deleteConfirm(e?){
+    console.log(e.data);
+    this.data.remove(e.data)
+  }
+  
+  settings = {
+      columns: {
+        id: {
+          title: 'ID',
+          editable: false,
+        },
+        name: {
+          title: 'Full Name'
+          
+        },
+        username: {
+          title: 'User Name'
+        },
+        email: {
+          title: 'Email'
+        }
+      },
+      mode: 'inline',
+      confirmSave: true,
+      confirmDelete:true
+    };
+
+
+}
+>>>>>>> 37ab8f361f024575072c959bea5ab1c94fbf61f8

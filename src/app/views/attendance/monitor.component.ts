@@ -1,94 +1,54 @@
-
-import { Component,OnInit } from '@angular/core';
-import { AdvClaimerService } from "../../services/advclaimer.service";
+import { Component, OnInit } from '@angular/core';
+import { AttendanceMonitorService } from "../../services/attmonitor.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { Http, Response } from '@angular/http';
-
-import { HttpErrorResponse } from '@angular/common/http';
-
 @Component({
-    templateUrl:'monitor.component.html'
+  templateUrl: 'monitor.component.html'
 })
 export class AttMonitorComponent implements OnInit{
-    
 
-    
-    data: LocalDataSource;
-    constructor(private advCService : AdvClaimerService, private http: Http) { 
-        this.data = new LocalDataSource()
-    }
+  data:LocalDataSource;
+  constructor(private attendanceMonitorService: AttendanceMonitorService) {
+    this.data = new LocalDataSource()
+   }
+   ngOnInit(){
+    this.attendanceMonitorService.getAttendanceMonitorList().subscribe(response=>{
+      this.data.load(response);
+    },error=>{alert("error")}
+    )
+   }
 
-    ngOnInit(){
-        this.advCService.getAdvClaimerList().subscribe(response=>{
-            this.data.load(response);
-          }
-            ,error=>{alert("error")}
-          
-        ) 
-    }
-    
+   editData(e?){
+    console.log(e);
+    console.log(this.data)
+  }
 
-    addRecord(event) {
-      console.log(event);
-      let param = "?nama_jabatan=" + event.newData.nama_jabatan;
-      console.log(param)
-      this.advCService.addAdvClaimer(param).subscribe(response => {
-        event.confirm.resolve(event.newData)  
-      }, error => {
-        alert(error.errorMessage)
-      })
-      
-    }
-
-    editData(event){
-      console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_jabatan=" + event.newData.nama_jabatan;
-       console.log(param)
-       this.advCService.editAdvClaimer(param).subscribe(response => {
-         event.confirm.resolve(event.newData)  
-       }, error => {
-         alert(error.errorMessage)
-       }) 
-
-    }
-
-    deleteRecord(event){
-      console.log(event);
-       let param = "?id=" + event.data.id+ "&nama_jabatan=" + event.data.nama_jabatan;
-       console.log(param)
-       this.advCService.deleteAdvClaimer(param).subscribe(response => {
-         event.confirm.resolve();
-       }, error => {
-         alert(error.errorMessage)
-       }) 
-    }
-
-    cek(){
-      console.log(this.data)
-    }
+  deleteConfirm(e?){
+    console.log(e.data);
+    this.data.remove(e.data)
+  }
   
-    
-      
-      settings = {
-        // "actions": {
-        //   "delete": false
-        // },
-        "columns": {
-          "nama_jabatan": {
-            "title": "Nama Jabatan"
-          }
+  settings = {
+      columns: {
+        id: {
+          title: 'ID',
+          editable: false,
         },
-        "mode": "inline",
-        add:{
-          confirmCreate: true
+        name: {
+          title: 'Full Name'
+          
         },
-        edit:{
-          confirmSave:true
+        username: {
+          title: 'User Name'
         },
-        delete:{
-          confirmDelete:true
+        email: {
+          title: 'Email'
         }
+      },
+      mode: 'inline',
+      confirmSave: true,
+      confirmDelete:true
+    };
 
-      };
+
 }

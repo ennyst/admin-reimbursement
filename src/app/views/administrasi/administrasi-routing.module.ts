@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { JabatanComponent } from './jabatan.component';
 import { TypeEmployeeComponent } from './typeemployee.component';
-import { ExpanseCategoryComponent } from './expansecategory.component';
-import { RoleLoginComponent } from './rolelogin.component';
+import { ExpenseCategoryComponent } from './expensecategory.component';
+
 import { RoleComponent } from './role.component';
 import { StatusComponent } from './status.component';
 import { AccountBankComponent } from './accountbank.component';
@@ -31,19 +31,13 @@ const routes: Routes=[
                 }
             },
             {
-                path: 'expansecategory',
-                component: ExpanseCategoryComponent,
+                path: 'expensecategory',
+                component: ExpenseCategoryComponent,
                 data: {
-                  title: 'Expanse Category'
+                  title: 'Expense Category'
                 }
             },
-            {
-                path: 'rolelogin',
-                component: RoleLoginComponent,
-                data: {
-                  title: 'Role Login'
-                }
-            },
+            
             {
                 path: 'role',
                 component: RoleComponent,

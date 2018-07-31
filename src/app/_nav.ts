@@ -164,25 +164,25 @@ export const navItems = [
     icon: 'icon-puzzle',
     children: [
       {
-        name: 'Jabatan',
+        name: 'Position',
         url: '/administrasi/jabatan',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Type Employee',
+        name: 'Employee Type ',
         url: '/administrasi/typeemployee',
         icon: 'icon-puzzle'
       },
       {
         name: 'Expense Category',
-        url: '/administrasi/expansecategory',
+        url: '/administrasi/expensecategory',
         icon: 'icon-puzzle'
       },
-      {
-        name: 'Role Login',
-        url: '/administrasi/rolelogin',
-        icon: 'icon-puzzle'
-      },
+      // {
+      //   name: 'Role Login',
+      //   url: '/administrasi/role',
+      //   icon: 'icon-puzzle'
+      // },
       {
         name: 'Role ',
         url: '/administrasi/role',
@@ -199,7 +199,7 @@ export const navItems = [
         icon: 'icon-puzzle'
       },
       {
-        name: 'Libur', 
+        name: 'Holiday', 
         url: '/administrasi/libur',
         icon: 'icon-puzzle'
       }

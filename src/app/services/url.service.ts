@@ -14,7 +14,7 @@ export class UrlService {
     }
 
     postUrlAddAdvClaimer():string{
-        return this.serverUrl + "/insertjabatan";
+        return this.serverUrl + "/insertjabatan"
     }
 
     postUrlEditAdvClaimer():string{
@@ -22,6 +22,53 @@ export class UrlService {
     }
     postUrlDeleteClaimer():string{
         return this.serverUrl + "/deletejabatan"
+    }
+
+    getUrlAdmRole():string{
+    return this.serverUrl + "/roleloginall"
+    }
+
+    postUrlAddAdmRole():string{
+        return this.serverUrl + "/insertrolelogin"
+    }
+
+    postUrlEditAdmRole():string{
+        return this.serverUrl + "/updaterolelogin"
+    }
+    postUrlDeleteAdmRole():string{
+        return this.serverUrl + "/deleterolelogin"
+    }
+
+
+    getUrlAdmPosition():string{
+        return this.serverUrl + "/jabatanall"
+    }
+    
+    postUrlAddAdmPosition():string{
+        return this.serverUrl + "/insertjabatan"
+    }
+    
+    postUrlEditAdmPosition():string{
+        return this.serverUrl + "/updatejabatan"
+    }
+    postUrlDeleteAdmPosition():string{
+    return this.serverUrl + "/deletejabatan"
+    }
+
+
+    getUrlAdmExpenseCategory():string{
+        return this.serverUrl + "/expensekategoriall"
+    }
+        
+    postUrlAddAdmExpenseCategory():string{
+        return this.serverUrl + "/insertexpensekategori"
+    }
+        
+    postUrlEditAdmExpenseCategory():string{
+        return this.serverUrl + "/updateexpensekategori"
+    }
+    postUrlDeleteAdmExpenseCategory():string{
+        return this.serverUrl + "/deleteexpensekategori"
     }
 
 
@@ -60,7 +107,14 @@ export class UrlService {
    getUrlAttendanceClaimer():string{
        return this.urlAttendanceClaimer;
    }
-   
+   urlAttendanceConfig: string="https://jsonplaceholder.typicode.com/users";
+   getUrlAttendanceConfig():string{
+       return this.urlAttendanceConfig;
+   }
+   urlAttendanceMonitor: string="https://jsonplaceholder.typicode.com/users";
+   getUrlAttendanceMonitor():string{
+       return this.urlAttendanceMonitor;
+   }
 
 
 
