@@ -98,9 +98,14 @@ export class UrlService {
    getUrlTeam():string{
        return this.urlTeam;
    }
-   urlEmployee: string="https://jsonplaceholder.typicode.com/users";
+
+   getUrlJabatan():string{
+    return this.serverUrl + "/jabatanall"
+    }
+   
+    urlEmployee: string="https://jsonplaceholder.typicode.com/users";
    getUrlEmployee():string{
-       return this.urlEmployee;
+         return this.urlEmployee;
    }
    
    urlExpenseCategory: string="https://jsonplaceholder.typicode.com/users";

@@ -25,6 +25,13 @@ export class EmployeeService {
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }
 
+     getJabatanList(): Observable<any[]> {
+        return this.http.get(this.urlService.getUrlJabatan())
+              .map((res: Response) => res.json())
+              .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+     }
+
+
 
     // getMaintenanceList(id:number): Observable<ListMaintenance[]> {
     //     return this.http.get(this.urlService.getUrlMaintenancetList(id), this.opts)
