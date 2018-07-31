@@ -12,10 +12,7 @@ import { HttpErrorResponse } from '@angular/common/http';
     templateUrl:'claimer.component.html'
 })
 export class ClaimerComponent implements OnInit{
-    MAC : ModelAdvClaimer[];
-    errorMessage: String;
-    jabatanName:String;
-    jabatan = new ModelAdvClaimer();
+   
 
     
     data: LocalDataSource;

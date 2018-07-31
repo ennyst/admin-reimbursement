@@ -1,11 +1,12 @@
-
 import { Component,OnInit } from '@angular/core';
-import { AdmExpenseCategoryService } from "../../services/admexpensecategory.service";
 import { LocalDataSource } from 'ng2-smart-table';
 
 import { Http, Response } from '@angular/http';
 
+import { ModelAdvClaimer } from "../../models/advclaimer.model";
 import { HttpErrorResponse } from '@angular/common/http';
+import { AdmExpenseCategoryService } from '../../services/admexpensecategory.service';
+
 
 @Component({
     templateUrl:'expensecategory.component.html'
@@ -26,11 +27,9 @@ export class ExpenseCategoryComponent implements OnInit{
             ,error=>{alert("error")}
         ) 
     }
-    
-
     addRecord(event) {
       console.log(event);
-      let param = "?nama_expense=" + event.newData.namaExpense + "&budget_maks=" + event.newData.budgetMaks + "&maks_transaksi=" + event.newData.maksTransaksi;
+      let param = "?nama_expense=" + event.newData.namaExpense + "&budget_maks=" + event.newData.budgetMaks + "&maks_transaksi=" + event.newData.maksTransaksi + "&idtipepengajuan=" + event.newData.idTipePengajuan ;
       console.log(param)
       this.admService.addAdmExpenseCategory(param).subscribe(response => {
         event.confirm.resolve(event.newData)  
@@ -42,7 +41,7 @@ export class ExpenseCategoryComponent implements OnInit{
 
     editData(event){
       console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_expense=" + event.newData.namaExpense;
+      let param = "?id=" + event.newData.id + "&nama_expense=" + event.newData.namaExpense;
        console.log(param)
        this.admService.editAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve(event.newData)  
@@ -54,7 +53,7 @@ export class ExpenseCategoryComponent implements OnInit{
 
     deleteRecord(event){
       console.log(event);
-       let param = "?id=" + event.data.id+ "&nama_expense=" + event.data.namaExpense;
+      let param = "?id=" + event.data.id+ "&nama_expense=" + event.data.namaExpense;
        console.log(param)
        this.admService.deleteAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve();
@@ -66,6 +65,8 @@ export class ExpenseCategoryComponent implements OnInit{
     cek(){
       console.log(this.data)
     }
+  
+ 
       
       settings = {
         // "actions": {
@@ -80,6 +81,9 @@ export class ExpenseCategoryComponent implements OnInit{
           },
           "maksTransaksi" :{
             "title" : "Transaction Maksimum",
+          },
+          "idTipePengajuan" :{
+            "title" : "Id pengajuan",
           }
         },
         "mode": "inline",

@@ -174,7 +174,7 @@ export const navItems = [
         icon: 'icon-puzzle'
       },
       {
-        name: 'Expense Category',
+        name: 'Expense Category * Reim typ',
         url: '/administrasi/expensecategory',
         icon: 'icon-puzzle'
       },
