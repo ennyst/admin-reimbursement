@@ -3,40 +3,36 @@ import { Http, Headers, RequestOptions, Response, RequestOptionsArgs } from '@an
 import { UrlService } from './url.service';
 import { Observable } from 'rxjs/Rx';
 
-
-
-
 @Injectable()
-export class AdmExpenseCategoryService {
+export class AdmAccountBank {
     token = localStorage.getItem('token')
     headers = new Headers();
     opts: RequestOptionsArgs;
-
-       
+    
     constructor(private http: Http, private urlService: UrlService) {
 
     }
 
-    getAdmExpenseCategoryList(): Observable<any[]> {
-        return this.http.get(this.urlService.getUrlAdmExpenseCategory())
+    getAccountBankList(): Observable<any[]> {
+        return this.http.get(this.urlService.getUrlAdmAccountBank())
               .map((res: Response) => res.json())
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }
 
-     addAdmExpenseCategory(param): Observable<any> {
-        return this.http.post(this.urlService.postUrlAddAdmExpenseCategory() + param,param,param)
+     addAccountBank(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlAddAdmAccountBank() + param,param )
             .map(this.extractData)
             .catch(this.handleErrorObservable);
     } 
       
-    editAdmExpenseCategory(param): Observable<any> {
-        return this.http.post(this.urlService.postUrlEditAdmExpenseCategory() + param,param )
+    editAccountBank(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlEditAdmAccountBank() + param,param )
             .map(this.extractData)
             .catch(this.handleErrorObservable);
     }
 
-    deleteAdmExpenseCategory(param) : Observable<any>{
-        return this.http.post(this.urlService.postUrlDeleteAdmExpenseCategory() + param,param )
+    deleteAccountBank(param) : Observable<any>{
+        return this.http.post(this.urlService.postUrlDeleteAdmAccountBank() + param,param )
             .map(this.extractData)
             .catch(this.handleErrorObservable);
     }

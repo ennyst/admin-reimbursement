@@ -27,7 +27,7 @@ export class RoleComponent implements OnInit{
           
         ) 
     }
-    
+     
 
     addRecord(event) {
       console.log(event);

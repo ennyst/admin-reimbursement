@@ -1,11 +1,9 @@
 
 import { Component,OnInit } from '@angular/core';
-import { AdvClaimerService } from "../../services/advclaimer.service";
 import { LocalDataSource } from 'ng2-smart-table';
-
 import { Http, Response } from '@angular/http';
-
 import { HttpErrorResponse } from '@angular/common/http';
+import { AdmAccountBank } from '../../services/admaccountbank.servive';
 
 @Component({
     templateUrl:'accountbank.component.html'
@@ -13,49 +11,44 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class AccountBankComponent implements OnInit{
     
     data: LocalDataSource;
-    constructor(private advCService : AdvClaimerService, private http: Http) { 
+    constructor(private admAccountBank : AdmAccountBank, private http: Http) { 
         this.data = new LocalDataSource()
     }
 
     ngOnInit(){
-        this.advCService.getAdvClaimerList().subscribe(response=>{
+        this.admAccountBank.getAccountBankList().subscribe(response=>{
             this.data.load(response);
           }
             ,error=>{alert("error")}
-          
         ) 
     }
-    
-
     addRecord(event) {
       console.log(event);
-      let param = "?nama_jabatan=" + event.newData.nama_jabatan;
+      let param = "?nama_bank=" + event.newData.nama_bank;
       console.log(param)
-      this.advCService.addAdvClaimer(param).subscribe(response => {
+      this.admAccountBank.addAccountBank(param).subscribe(response => {
         event.confirm.resolve(event.newData)  
       }, error => {
         alert(error.errorMessage)
       })
-      
     }
 
     editData(event){
       console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_jabatan=" + event.newData.nama_jabatan;
+       let param = "?id=" + event.newData.id + "&nama_bank=" + event.newData.nama_bank;
        console.log(param)
-       this.advCService.editAdvClaimer(param).subscribe(response => {
+       this.admAccountBank.editAccountBank(param).subscribe(response => {
          event.confirm.resolve(event.newData)  
        }, error => {
          alert(error.errorMessage)
        }) 
-
     }
 
     deleteRecord(event){
       console.log(event);
-       let param = "?id=" + event.data.id+ "&nama_jabatan=" + event.data.nama_jabatan;
+       let param = "?id=" + event.data.id+ "&nama_bank=" + event.data.nama_bank;
        console.log(param)
-       this.advCService.deleteAdvClaimer(param).subscribe(response => {
+       this.admAccountBank.deleteAccountBank(param).subscribe(response => {
          event.confirm.resolve();
        }, error => {
          alert(error.errorMessage)
@@ -65,16 +58,11 @@ export class AccountBankComponent implements OnInit{
     cek(){
       console.log(this.data)
     }
-  
     
-      
       settings = {
-        // "actions": {
-        //   "delete": false
-        // },
         "columns": {
-          "nama_jabatan": {
-            "title": "Nama Jabatan"
+          "nama_bank": {
+            "title": "Nama Bank"
           }
         },
         "mode": "inline",

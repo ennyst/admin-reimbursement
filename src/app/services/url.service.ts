@@ -24,6 +24,9 @@ export class UrlService {
         return this.serverUrl + "/deletejabatan"
     }
 
+
+
+
     getUrlAdmRole():string{
     return this.serverUrl + "/roleloginall"
     }
@@ -38,6 +41,8 @@ export class UrlService {
     postUrlDeleteAdmRole():string{
         return this.serverUrl + "/deleterolelogin"
     }
+
+
 
 
     getUrlAdmPosition():string{
@@ -55,6 +60,9 @@ export class UrlService {
     return this.serverUrl + "/deletejabatan"
     }
 
+
+
+
     getUrlAdmExpenseCategory():string{
         return this.serverUrl + "/expensekategoriall"
     }
@@ -71,6 +79,9 @@ export class UrlService {
     }
 
     
+
+
+
     getUrlAdmStatus():string{
         return this.serverUrl + "/statusall"
     }
@@ -86,6 +97,24 @@ export class UrlService {
         return this.serverUrl + "/deletestatus"
     }
 
+
+
+
+    //akun bank
+    getUrlAdmAccountBank():string{
+        return this.serverUrl + "/akunbankall"
+    }
+        
+    postUrlAddAdmAccountBank():string{
+        return this.serverUrl + "/insertakunbank"
+    }
+        
+    postUrlEditAdmAccountBank():string{
+        return this.serverUrl + "/updateakunbank"
+    }
+    postUrlDeleteAdmAccountBank():string{
+        return this.serverUrl + "/deleteakunbank"
+    }
 
 
    urlAdvApprover: string="https://jsonplaceholder.typicode.com/users";

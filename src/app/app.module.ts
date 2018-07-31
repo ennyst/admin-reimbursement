@@ -66,6 +66,8 @@ import { AttendanceMonitorService } from "./services/attmonitor.service";
 import { AdmPositionService } from "./services/admposition.service";
 import { AdmRoleService } from "./services/admrole.service";
 import { AdmExpenseCategoryService } from "./services/admexpensecategory.service";
+import { AdmAccountBank } from './services/admaccountbank.servive';
+import { AdmStatusService } from './services/admstatus.service';
 
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
@@ -115,6 +117,8 @@ import { AdmExpenseCategoryService } from "./services/admexpensecategory.service
   ],
 
   providers:[
+    AdmStatusService,
+    AdmAccountBank,
     AdvAprService,
     UrlService,
     TeamService,

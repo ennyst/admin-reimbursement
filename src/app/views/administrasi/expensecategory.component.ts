@@ -30,10 +30,8 @@ export class ExpenseCategoryComponent implements OnInit{
 
     addRecord(event) {
       console.log(event);
-      let param = "?namaExpense=" + event.newData.namaExpense; 
-      let param2 = "?budgetMaks=" +event.newData.budgetMaks;
-      let param3 = "?maksTransaksi" +event.newData.maksTransaksi;
-      console.log(param,param2,param3)
+      let param = "?nama_expense=" + event.newData.namaExpense + "&budget_maks=" + event.newData.budgetMaks + "&maks_transaksi=" + event.newData.maksTransaksi;
+      console.log(param)
       this.admService.addAdmExpenseCategory(param).subscribe(response => {
         event.confirm.resolve(event.newData)  
       }, error => {
@@ -44,7 +42,7 @@ export class ExpenseCategoryComponent implements OnInit{
 
     editData(event){
       console.log(event);
-       let param = "?id=" + event.newData.id + "&namaExpense=" + event.newData.namaExpense;
+       let param = "?id=" + event.newData.id + "&nama_expense=" + event.newData.namaExpense;
        console.log(param)
        this.admService.editAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve(event.newData)  
@@ -56,7 +54,7 @@ export class ExpenseCategoryComponent implements OnInit{
 
     deleteRecord(event){
       console.log(event);
-       let param = "?id=" + event.data.id+ "&namaExpense=" + event.data.namaExpense;
+       let param = "?id=" + event.data.id+ "&nama_expense=" + event.data.namaExpense;
        console.log(param)
        this.admService.deleteAdmExpenseCategory(param).subscribe(response => {
          event.confirm.resolve();
