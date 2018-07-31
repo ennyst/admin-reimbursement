@@ -49,17 +49,26 @@ import { UrlService } from "./services/url.service";
 import { TeamService } from "./services/team.service";
 import { EmployeeService } from "./services/employee.service";
 import { AdvClaimerService } from './services/advclaimer.service';
-import { ExpenseCategoryService } from "./services/expensecategory.service";
+
 import { TagService } from "./services/tag.service";
 import { AdvFinanceService } from './services/advfinance.service';
 import { AdvVerificatorService } from './services/advverificator.service';
 import { ReimbursementClaimerService } from "./services/reimbursementclaimer.service";
 import { ReimbursementApproverService } from './services/reimbursementapprover.service';
 import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
+<<<<<<< HEAD
 import { modelApiAdvClaimer } from './models/advaprover.model';
 import { AttendanceClaimerService } from './services/attendanceclaimer.service';
 import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+=======
+import { AttendanceClaimerService } from './services/attclaimer.service';
+import { AttendanceConfigService } from "./services/attconfig.service";
+import { AttendanceMonitorService } from "./services/attmonitor.service";
+import { AdmPositionService } from "./services/admposition.service";
+import { AdmRoleService } from "./services/admrole.service";
+import { AdmExpenseCategoryService } from "./services/admexpensecategory.service";
+>>>>>>> 37ab8f361f024575072c959bea5ab1c94fbf61f8
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
 // import { MatNativeDateModule, MatDatepickerModule } from '@angular/material';
@@ -112,6 +121,8 @@ import { BrowserModule } from '@angular/platform-browser';
     UrlService,
     TeamService,
     AttendanceClaimerService,
+    AttendanceConfigService,
+    AttendanceMonitorService,
     EmployeeService,
     AdvClaimerService,
     TagService,
@@ -120,7 +131,9 @@ import { BrowserModule } from '@angular/platform-browser';
     ReimbursementClaimerService,
     ReimbursementApproverService,
     ReimbursementFinanceService,
-    ExpenseCategoryService
+    AdmExpenseCategoryService,
+    AdmPositionService,
+    AdmRoleService
   ],
   exports: [
     CommonModule,
