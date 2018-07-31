@@ -58,6 +58,8 @@ import { ReimbursementApproverService } from './services/reimbursementapprover.s
 import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
 import { modelApiAdvClaimer } from './models/advaprover.model';
 import { AttendanceClaimerService } from './services/attendanceclaimer.service';
+import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
 // import { MatNativeDateModule, MatDatepickerModule } from '@angular/material';
@@ -75,10 +77,11 @@ import { AttendanceClaimerService } from './services/attendanceclaimer.service';
     // MatNativeDateModule,
     // AngularDateTimePickerModule, 
     // NgDatepickerModule,
-    DataTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+    // DataTableModule,
     CommonModule,
-    BrowserAnimationsModule,
-    //  BrowserModule,
+    BrowserModule,
     NoopAnimationsModule,
     AppRoutingModule,
     AppAsideModule,
@@ -119,7 +122,11 @@ import { AttendanceClaimerService } from './services/attendanceclaimer.service';
     ReimbursementFinanceService,
     ExpenseCategoryService
   ],
-
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
