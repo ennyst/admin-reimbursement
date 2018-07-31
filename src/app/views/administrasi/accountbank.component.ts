@@ -12,8 +12,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class AccountBankComponent implements OnInit{
     
-
-    
     data: LocalDataSource;
     constructor(private advCService : AdvClaimerService, private http: Http) { 
         this.data = new LocalDataSource()
