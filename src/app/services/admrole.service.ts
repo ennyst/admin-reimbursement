@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response, RequestOptionsArgs } from '@angular/http';
 import { UrlService } from './url.service';
 import { Observable } from 'rxjs/Rx';
-import { ModelAdmPosition } from "../models/admposition.model";
 
 
 

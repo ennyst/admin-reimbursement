@@ -36,7 +36,7 @@ export class UrlService {
     }
 
     postUrlEditAdmRole():string{
-        return this.serverUrl + "/updaterolelogin"
+        return this.serverUrl + "/updatetrolelogin"
     }
     postUrlDeleteAdmRole():string{
         return this.serverUrl + "/deleterolelogin"
@@ -50,7 +50,7 @@ export class UrlService {
     }
     
     postUrlAddAdmPosition():string{
-        return this.serverUrl + "/insertjabatan2"
+        return this.serverUrl + "/insertjabatan"
     }
     
     postUrlEditAdmPosition():string{
@@ -61,8 +61,24 @@ export class UrlService {
     }
 
 
+    //employee type
+    getUrlAdmTypEmployee():string{
+        return this.serverUrl + "/tipekaryawanall"
+    }
+        
+    postUrlAddAdmTypEmployee():string{
+        return this.serverUrl + "/inserttipekaryawan"
+    }
+        
+    postUrlEditAdmTypEmployee():string{
+        return this.serverUrl + "/updatetipekaryawan"
+    }
+    postUrlDeleteAdmTypEmployee():string{
+        return this.serverUrl + "/deletetipekaryawan"
+    }
 
 
+    //expense canetpgi
     getUrlAdmExpenseCategory():string{
         return this.serverUrl + "/expensekategoriall"
     }
@@ -81,7 +97,7 @@ export class UrlService {
     
 
 
-
+    //status
     getUrlAdmStatus():string{
         return this.serverUrl + "/statusall"
     }

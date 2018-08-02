@@ -56,7 +56,7 @@ import { AdvVerificatorService } from './services/advverificator.service';
 import { ReimbursementClaimerService } from "./services/reimbursementclaimer.service";
 import { ReimbursementApproverService } from './services/reimbursementapprover.service';
 import { ReimbursementFinanceService } from './services/reimbursementfinance.service';
-import { modelApiAdvClaimer } from './models/advaprover.model';
+
 import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -68,6 +68,7 @@ import { AdmRoleService } from "./services/admrole.service";
 import { AdmExpenseCategoryService } from "./services/admexpensecategory.service";
 import { AdmAccountBank } from './services/admaccountbank.servive';
 import { AdmStatusService } from './services/admstatus.service';
+import { AdmTypeEmployee } from './services/admtypeemployee';
 
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
@@ -117,6 +118,7 @@ import { AdmStatusService } from './services/admstatus.service';
   ],
 
   providers:[
+    AdmTypeEmployee,
     AdmStatusService,
     AdmAccountBank,
     AdvAprService,

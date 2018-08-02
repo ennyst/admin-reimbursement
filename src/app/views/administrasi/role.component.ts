@@ -43,7 +43,7 @@ export class RoleComponent implements OnInit{
 
     editData(event){
       console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_role=" + event.newData.nama_role;
+      let param = "?id=" + event.newData.id+ "&nama_role=" + event.newData.nama_role;
        console.log(param)
        this.admService.editAdmRole(param).subscribe(response => {
          event.confirm.resolve(event.newData)  

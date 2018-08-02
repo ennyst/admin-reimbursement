@@ -5,7 +5,6 @@ import { LocalDataSource } from 'ng2-smart-table';
 
 import { Http, Response } from '@angular/http';
 
-import { ModelAdvClaimer } from "../../models/advclaimer.model";
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({

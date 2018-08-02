@@ -3,8 +3,6 @@ import { Http, Headers, RequestOptions, Response, RequestOptionsArgs } from '@an
 import { UrlService } from './url.service';
 import { Observable } from 'rxjs/Rx';
 
-import { ModelAdvClaimer } from "../models/advclaimer.model";
-
 
 @Injectable()
 export class AdvClaimerService {
