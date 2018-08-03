@@ -65,10 +65,12 @@ import { AttendanceConfigService } from "./services/attconfig.service";
 import { AttendanceMonitorService } from "./services/attmonitor.service";
 import { AdmPositionService } from "./services/admposition.service";
 import { AdmRoleService } from "./services/admrole.service";
-import { AdmExpenseCategoryService } from "./services/admexpensecategory.service";
 import { AdmAccountBank } from './services/admaccountbank.servive';
 import { AdmStatusService } from './services/admstatus.service';
 import { AdmTypeEmployee } from './services/admtypeemployee';
+import { AdmReimbursementTypeService } from './services/admreimbursementtype.service';
+import { ReimbursementTypeComponent } from './views/administrasi/reimbursementtype.component';
+import { ExpenseCategoryService } from './services/expensecategory.service';
 
 // import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
@@ -118,26 +120,35 @@ import { AdmTypeEmployee } from './services/admtypeemployee';
   ],
 
   providers:[
-    AdmTypeEmployee,
-    AdmStatusService,
-    AdmAccountBank,
-    AdvAprService,
+    
+    
     UrlService,
     TeamService,
+    ExpenseCategoryService,
+
     AttendanceClaimerService,
     AttendanceConfigService,
     AttendanceMonitorService,
+
     EmployeeService,
-    AdvClaimerService,
     TagService,
+
+    AdvAprService,
+    AdvClaimerService,
     AdvFinanceService,
     AdvVerificatorService,
+
     ReimbursementClaimerService,
     ReimbursementApproverService,
     ReimbursementFinanceService,
-    AdmExpenseCategoryService,
+
     AdmPositionService,
-    AdmRoleService
+    AdmRoleService,
+    AdmReimbursementTypeService,
+    AdmTypeEmployee,
+    AdmStatusService,
+    AdmAccountBank,
+
   ],
   exports: [
     CommonModule,

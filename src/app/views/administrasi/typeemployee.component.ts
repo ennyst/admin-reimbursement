@@ -31,7 +31,7 @@ export class TypeEmployeeComponent implements OnInit{
 
     addRecord(event) {
       console.log(event);
-      let param = "?nama_typekaryawan=" + event.newData.nama_typekaryawan;
+      let param = "?nama_tipekaryawan=" + event.newData.nama_typekaryawan;
       console.log(param)
       this.advCService.addAdmTypeEmployee(param).subscribe(response => {
         event.confirm.resolve(event.newData)  
@@ -43,7 +43,7 @@ export class TypeEmployeeComponent implements OnInit{
 
     editData(event){
       console.log(event);
-       let param = "?id=" + event.newData.id + "&nama_typekaryawan=" + event.newData.nama_typekaryawan;
+       let param = "?id=" + event.newData.id + "&nama_tipekaryawan=" + event.newData.nama_typekaryawan;
        console.log(param)
        this.advCService.editAdmTypeEmployee(param).subscribe(response => {
          event.confirm.resolve(event.newData)  
@@ -55,7 +55,7 @@ export class TypeEmployeeComponent implements OnInit{
 
     deleteRecord(event){
       console.log(event);
-       let param = "?id=" + event.data.id+ "&nama_typekaryawan=" + event.data.nama_typekaryawan;
+       let param = "?id=" + event.data.id+ "&nama_tipekaryawan=" + event.data.nama_typekaryawan;
        console.log(param)
        this.advCService.deleteAdmTypeEmployee(param).subscribe(response => {
          event.confirm.resolve();

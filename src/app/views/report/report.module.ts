@@ -43,9 +43,6 @@ import { ReportAttendanceComponent } from "./reportattendance.component";
         ReportCashadvanceComponent,
         ReportReimbursementComponent,
         ReportAttendanceComponent
-
-        
-        
     ]
 })
 export class ReportModule{}

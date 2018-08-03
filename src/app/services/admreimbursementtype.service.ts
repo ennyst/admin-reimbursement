@@ -5,9 +5,8 @@ import { Observable } from 'rxjs/Rx';
 
 
 
-
 @Injectable()
-export class AdmExpenseCategoryService {
+export class AdmReimbursementTypeService {
     token = localStorage.getItem('token')
     headers = new Headers();
     opts: RequestOptionsArgs;
@@ -17,26 +16,26 @@ export class AdmExpenseCategoryService {
 
     }
 
-    getAdmExpenseCategoryList(): Observable<any[]> {
-        return this.http.get(this.urlService.getUrlAdmExpenseCategory())
+    getAdmReimbursementTypeList(): Observable<any[]> {
+        return this.http.get(this.urlService.getUrlAdmReimbursementType())
               .map((res: Response) => res.json())
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }
 
-     addAdmExpenseCategory(param): Observable<any> {
-        return this.http.post(this.urlService.postUrlAddAdmExpenseCategory() + param,param,param)
+     addAdmReimbursementType(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlAddAdmReimbursementType() + param,param )
             .map(this.extractData)
             .catch(this.handleErrorObservable);
     } 
       
-    editAdmExpenseCategory(param): Observable<any> {
-        return this.http.post(this.urlService.postUrlEditAdmExpenseCategory() + param,param )
+    editAdmReimbursementType(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlEditAdmReimbursementType() + param,param )
             .map(this.extractData)
             .catch(this.handleErrorObservable);
     }
 
-    deleteAdmExpenseCategory(param) : Observable<any>{
-        return this.http.post(this.urlService.postUrlDeleteAdmExpenseCategory() + param,param )
+    deleteAdmReimbursementType(param) : Observable<any>{
+        return this.http.post(this.urlService.postUrlDeleteAdmReimbursementType() + param,param )
             .map(this.extractData)
             .catch(this.handleErrorObservable);
     }

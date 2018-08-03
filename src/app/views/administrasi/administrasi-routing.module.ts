@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { JabatanComponent } from './jabatan.component';
 import { TypeEmployeeComponent } from './typeemployee.component';
-import { ExpenseCategoryComponent } from './expensecategory.component';
 
 import { RoleComponent } from './role.component';
 import { StatusComponent } from './status.component';
 import { AccountBankComponent } from './accountbank.component';
 import { LiburComponent } from './libur.component';
+import { ReimbursementTypeComponent } from './reimbursementtype.component';
 
 const routes: Routes=[
     {
@@ -30,11 +30,12 @@ const routes: Routes=[
                   title: 'Type Employee'
                 }
             },
+          
             {
-                path: 'expensecategory',
-                component: ExpenseCategoryComponent,
+                path: 'reimbursementtype',
+                component: ReimbursementTypeComponent,
                 data: {
-                  title: 'Expense Category'
+                  title: 'Reimbursement Type'
                 }
             },
             

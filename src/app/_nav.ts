@@ -174,8 +174,8 @@ export const navItems = [
         icon: 'icon-puzzle'
       },
       {
-        name: 'Expense Category * Reim typ',
-        url: '/administrasi/expensecategory',
+        name: 'Reimbursement Type',
+        url: '/administrasi/reimbursementtype',
         icon: 'icon-puzzle'
       },
       // {

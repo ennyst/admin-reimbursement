@@ -25,19 +25,32 @@ export class ExpenseCategoryService {
               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
      }
 
+     addExpenseCategory(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlAddExpenseCategory() + param,param,param)
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
+    } 
+      
+    editExpenseCategory(param): Observable<any> {
+        return this.http.post(this.urlService.postUrlEditExpenseCategory() + param,param )
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
+    }
 
-    // getMaintenanceList(id:number): Observable<ListMaintenance[]> {
-    //     return this.http.get(this.urlService.getUrlMaintenancetList(id), this.opts)
-    //           .map((res: Response) => res.json())
-    //           .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-    //  }
- 
+    deleteExpenseCategory(param) : Observable<any>{
+        return this.http.post(this.urlService.postUrlDeleteExpenseCategory() + param,param )
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
+    }
 
-    //  public editAttendance(periodId:number, scheduleId:number, attendanceData: PostEditAttendance[]): Observable<boolean>{
-    //         return this.http.post(this.urlService.postUrlEditAttendance(periodId, scheduleId), attendanceData, this.opts)
-    //         .map(this.extractData)
-    //         .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-    //   }
+
+  
+
+     handleErrorObservable (error: Response | any) {
+        console.error(error.message || error);
+        return Observable.throw(error.message || error);
+      }
+
 
      
      private extractData(res:Response) {

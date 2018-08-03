@@ -78,21 +78,24 @@ export class UrlService {
     }
 
 
-    //expense canetpgi
-    getUrlAdmExpenseCategory():string{
-        return this.serverUrl + "/expensekategoriall"
+  
+
+     //REimbursement type
+     getUrlAdmReimbursementType():string{
+        return this.serverUrl + "/tipepengajuanall"
     }
         
-    postUrlAddAdmExpenseCategory():string{
-        return this.serverUrl + "/insertexpensekategori/"
+    postUrlAddAdmReimbursementType():string{
+        return this.serverUrl + "/inserttipePengajuan"
     }
         
-    postUrlEditAdmExpenseCategory():string{
-        return this.serverUrl + "/updateexpensekategori/"
+    postUrlEditAdmReimbursementType():string{
+        return this.serverUrl + "/updatetipePengajuan"
     }
-    postUrlDeleteAdmExpenseCategory():string{
-        return this.serverUrl + "/deleteexpensekategori/"
+    postUrlDeleteAdmReimbursementType():string{
+        return this.serverUrl + "/deletetipePengajuan"
     }
+
 
     
 
@@ -152,11 +155,26 @@ export class UrlService {
    getUrlEmployee():string{
          return this.urlEmployee;
    }
+
+
+   //expanse category
    
-   urlExpenseCategory: string="https://jsonplaceholder.typicode.com/users";
+   
    getUrlExpenseCategory():string{
-       return this.urlExpenseCategory;
+     return this.serverUrl + "/expensekategoriall"
    }
+
+    postUrlAddExpenseCategory():string{
+        return this.serverUrl + "/insertexpensekategori/"
+    }
+        
+    postUrlEditExpenseCategory():string{
+        return this.serverUrl + "/updateexpensekategori/"
+    }
+    postUrlDeleteExpenseCategory():string{
+        return this.serverUrl + "/deleteexpensekategori/"
+    }
+
 
    urlTag: string="https://jsonplaceholder.typicode.com/users";
    getUrlTag():string{

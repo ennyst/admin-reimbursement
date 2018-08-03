@@ -1,92 +1,13 @@
 <div class="animated fadeIn">
-    <div class="mg-auto" align="center">
-        <img src="assets/img/icon/icons8-sum-90.png"  data-toggle="modal" (click)="largeModal.show()"/>
-        <p>Add Expense Category</p>
-      </div><!--/.col-->
-    <div class="card">
-      <div class="card-header">
-        Expense Category
-      </div>
-      <div class="card-body">
-        
-        <ng2-smart-table [settings]="settings" (editConfirm)="editData($event)" (delete)="deleteConfirm($event)" [source]="data"></ng2-smart-table>
-        </div>
+  <div class="card">
+    <div class="card-header">
+      Headings
     </div>
-    <div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Add Team</h4>
-              <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                
-                <div class="form-group row">
-                    <label class="col-md-2 col-form-label" for="name-input">Expense Name</label>
-                    <div class="col-md-10">
-                      <input type="text" id="expensename" name="status" class="form-control" placeholder="Expense Name">
-                    </div>
-                </div>
-                
-            <div class="form-group row">
-                <label class="col-md-2 col-form-label" for="name-input">Expense Type</label>
-                <div class="form-group col-md-10">
-                  <select class="form-control" id="expensetypeid">
-                    <option>Cash Advance</option>
-                    <option>Reimbursement</option>
-                  </select>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-2 col-form-label" for="name-input">Maximum Amount Per Transaction</label>
-                <div class="col-md-10">
-                  <input type="text" id="maxtransaction" name="status" class="form-control" placeholder="">
-                </div>
-            </div>
-                       
-           <hr >
-
-           
-              
-              <div class="col-xl-8 col-md-8 col-sm-8 col-8 mb-8">
-                  <div  class="bg-secondary theme-color w-300 rounded mb-6" style="padding-top:5%; padding-left: 7%; padding-right: 7%;">
-                      <form>
-                          <div class="form-group row">
-                              <label class="col-md-2 col-form-label" for="name-input">Approval Type</label>
-                              <div class="form-group col-md-10">
-                                <select class="form-control" id="approvaltypeid">
-                                  <option>1</option>
-                                  <option>2</option>
-                                </select>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label class="col-md-2 col-form-label" for="name-input">Employee Name</label>
-                              <div class="form-group col-md-10">
-                                <select class="form-control" id="employeeid">
-                                  <option>Andi</option>
-                                  <option>Budi</option>
-                                </select>
-                              </div>
-                          </div>
-                          <button type="submit" class="btn btn-primary">ADD</button>
-                        </form>
-
-                  </div>
-                 
-                </div>
-        
-
-          
-          </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" (click)="largeModal.hide()">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+    <div class="card-body">
       
+      <ng2-smart-table [settings]="settings" (createConfirm)="addRecord($event)" (editConfirm)="editData($event)" (deleteConfirm)="deleteRecord($event)"  [source]="data"></ng2-smart-table>
+      </div>
+  </div>
+  <button (click)="cek()">hahah</button>
 </div>
+      
